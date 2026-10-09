@@ -1,0 +1,27 @@
+/* =========================================================
+   ABOUT US
+   ========================================================= */
+
+/* Hero */
+.about-hero-tagline {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--primary);
+  margin: 25px 0 0;
+}
+
+/* Our story */
+.about-hatched-title { width: 50%; margin-top: 20px; }
+.about-drips-art { margin-top: 10px; }
+.about-drips-art img { width: 100%; }
+
+.about-triumph-art img { width: 100%; }
+.about-eleven-title { width: 40%; margin-top: 40px; }
+.about-shop-title { width: 60%; margin-top: 30px; }
+
+/* Store image */
+.about-store img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

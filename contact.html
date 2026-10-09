@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | Xotica BadBoy Kebabs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/header.css" rel="stylesheet">
+  <link href="assets/css/footer.css" rel="stylesheet">
+  <link href="assets/css/contact.css" rel="stylesheet">
+  <link href="assets/css/responsive.css" rel="stylesheet">
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- ================= HEADER ================= -->
+  <div id="header"></div>
+
+  <main>
+
+    <!-- ================= SECTION 1: HERO ================= -->
+    <section class="contact-hero">
+      <div class="contact-hero-inner">
+        <img src="assets/images/contact/dripping-good-chicken.svg" alt="Henny's - Dripping Good Chicken" class="contact-hero-art" data-animate="fadeIn">
+      </div>
+    </section>
+
+    <!-- ================= SECTION 2: FORM + FAQ ================= -->
+    <section class="contact-main">
+      <div class="container">
+        <div class="contact-row">
+
+          <div class="contact-col contact-col-form">
+            <h2 class="contact-title" data-animate="slideInUp">Here To Help</h2>
+            <div class="contact-sub" data-animate="slideInUp"><span>Just drop us an email..</span></div>
+            <div class="contact-intro" data-animate="slideInUp">
+              <p>One of our team members will get back to you as soon as possible.</p>
+            </div>
+
+            <form class="contact-form" name="Contact Form" aria-label="Contact Form" onsubmit="return false;">
+              <div class="contact-form-fields">
+                <div class="contact-field contact-field-half">
+                  <label for="form-field-first_name" class="visually-hidden">First Name*</label>
+                  <input type="text" name="first_name" id="form-field-first_name" placeholder="First Name*" required>
+                </div>
+                <div class="contact-field contact-field-half">
+                  <label for="form-field-last_name" class="visually-hidden">Last Name*</label>
+                  <input type="text" name="last_name" id="form-field-last_name" placeholder="Last Name*" required>
+                </div>
+                <div class="contact-field contact-field-half">
+                  <label for="form-field-email" class="visually-hidden">Email*</label>
+                  <input type="email" name="email" id="form-field-email" placeholder="Email*" required>
+                </div>
+                <div class="contact-field contact-field-half">
+                  <label for="form-field-telephone" class="visually-hidden">Telephone*</label>
+                  <input type="tel" name="telephone" id="form-field-telephone" placeholder="Telephone*" required pattern="[0-9()#&amp;+*-=.]+" title="Only numbers and phone characters (#, -, *, etc) are accepted.">
+                </div>
+                <div class="contact-field">
+                  <label for="form-field-message" class="visually-hidden">Message*</label>
+                  <textarea name="message" id="form-field-message" rows="10" placeholder="Message*" required></textarea>
+                </div>
+                <div class="contact-field">
+                  <button type="submit" class="contact-submit">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="contact-col contact-col-faq">
+            <h2 class="contact-title contact-title-accent" data-animate="slideInUp">FAQ</h2>
+            <div class="contact-sub" data-animate="slideInUp"><span>Some of the most frequent questions..</span></div>
+            <div class="contact-faq-intro" data-animate="slideInUp">
+              <p>Can’t find the answer below? Drop us an email using the form on this page and we’ll get back to you asap.</p>
+            </div>
+
+            <div class="contact-accordion" aria-label="Accordion. Open links with Enter or Space, close with Escape, and navigate with Arrow Keys">
+              <details class="contact-accordion-item">
+                <summary class="contact-accordion-title" aria-expanded="false">
+                  <span class="contact-accordion-icon" aria-hidden="true">
+                    <svg class="contact-icon-open" viewBox="0 0 448 512"><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>
+                    <svg class="contact-icon-closed" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+                  </span>
+                  <span class="contact-accordion-text">How can I find the closest Henny’s?</span>
+                </summary>
+                <div class="contact-accordion-content" role="region">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
+              </details>
+              <details class="contact-accordion-item">
+                <summary class="contact-accordion-title" aria-expanded="false">
+                  <span class="contact-accordion-icon" aria-hidden="true">
+                    <svg class="contact-icon-open" viewBox="0 0 448 512"><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>
+                    <svg class="contact-icon-closed" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+                  </span>
+                  <span class="contact-accordion-text">Do you franchise?</span>
+                </summary>
+                <div class="contact-accordion-content" role="region">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
+              </details>
+              <details class="contact-accordion-item">
+                <summary class="contact-accordion-title" aria-expanded="false">
+                  <span class="contact-accordion-icon" aria-hidden="true">
+                    <svg class="contact-icon-open" viewBox="0 0 448 512"><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>
+                    <svg class="contact-icon-closed" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+                  </span>
+                  <span class="contact-accordion-text">What time do Henny’s close?</span>
+                </summary>
+                <div class="contact-accordion-content" role="region">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
+              </details>
+              <details class="contact-accordion-item">
+                <summary class="contact-accordion-title" aria-expanded="false">
+                  <span class="contact-accordion-icon" aria-hidden="true">
+                    <svg class="contact-icon-open" viewBox="0 0 448 512"><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>
+                    <svg class="contact-icon-closed" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+                  </span>
+                  <span class="contact-accordion-text">Where can I find latest offers?</span>
+                </summary>
+                <div class="contact-accordion-content" role="region">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
+              </details>
+              <details class="contact-accordion-item">
+                <summary class="contact-accordion-title" aria-expanded="false">
+                  <span class="contact-accordion-icon" aria-hidden="true">
+                    <svg class="contact-icon-open" viewBox="0 0 448 512"><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>
+                    <svg class="contact-icon-closed" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+                  </span>
+                  <span class="contact-accordion-text">Where can I download the menu?</span>
+                </summary>
+                <div class="contact-accordion-content" role="region">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 3: TASTE THE DIFFERENCE ================= -->
+    <section class="contact-taste" data-parallax-speed="4">
+      <div class="food-pattern-layer contact-taste-layer" aria-hidden="true"></div>
+      <div class="contact-taste-inner">
+        <img src="assets/images/contact/taste-the-difference.svg" alt="Taste The Henny's Difference" class="contact-taste-art">
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <div id="footer"></div>
+
+</div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,429 @@
+/* =========================================================
+   RESPONSIVE – containers & breakpoints
+   ========================================================= */
+@media (min-width: 1200px) {
+  .page-wrapper .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .page-wrapper .container {
+    max-width: 1440px;
+  }
+}
+
+@media (max-width: 1499px) {
+  /* Hero */
+  .hero .carousel-control-prev i,
+  .hero .carousel-control-next i { font-size: 38px; }
+
+  /* Flavours */
+  .flavours-intro { padding: 44px 0 62px; }
+  .flavours-title { font-size: 39px; margin-bottom: 76px; }
+  .drip-copy { font-size: 28px; letter-spacing: 1px; }
+  .sauce-tile { width: 221px; }
+  .sauce-info h4 { font-size: 21px; }
+  .sauce-info p { font-size: 14px; }
+
+  /* Products, rewards, mild to wild */
+  .products { padding: 91px 0 117px; }
+  .rewards-text { font-size: 25px; max-width: 410px; }
+  .mild-wild { padding: 91px 0 104px; }
+
+  /* Footer */
+  .footer-title { font-size: 34px; }
+}
+
+@media (max-width: 1199px) {
+  /* Hero */
+  .hero .carousel-control-prev i,
+  .hero .carousel-control-next i { font-size: 33px; }
+
+  /* Flavours */
+  .flavours-intro { padding: 40px 0 56px; }
+  .flavours-title { font-size: 33px; margin-bottom: 64px; }
+  .drip-copy { font-size: 24px; }
+  .sauce-tile { width: 187px; }
+  .sauce-info { padding: 12px 16px; }
+  .sauce-info h4 { font-size: 18px; }
+
+  /* Products, rewards, mild to wild */
+  .products { padding: 77px 0 99px; }
+  .rewards { padding: 33px 0; }
+  .rewards-text { font-size: 21px; max-width: 345px; }
+  .mild-wild { padding: 77px 0 88px; }
+
+  /* Footer */
+  .footer-main { padding: 55px 0; }
+  .footer-title { font-size: 29px; }
+}
+
+@media (max-width: 991px) {
+  /* Header */
+  .site-logo { height: 62px; }
+  /* Mobile menu opens as an overlay so the page content doesn't move */
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+  }
+  .navbar-collapse .navbar-nav { padding: 12px 16px 16px; }
+  .navbar .nav-link { padding: 10px 0 !important; border-bottom: 1px solid #f1f1f1; }
+  .navbar .nav-item .btn-brand { margin-left: 0; margin-top: 16px; width: 100%; }
+
+  /* Hero */
+  .hero .carousel-control-prev i,
+  .hero .carousel-control-next i { font-size: 26px; }
+
+  /* Flavours */
+  .flavours-intro { padding: 40px 0 48px; }
+  .flavours-title { font-size: 26px; margin-bottom: 40px; }
+  .drip-copy { font-size: 24px; }
+  .sauce-tile { width: 180px; }
+
+  /* Products, rewards, mild to wild */
+  .products { padding: 62px 0 79px; }
+  .rewards { padding: 29px 0; }
+  .rewards-text { font-size: 18px; max-width: 300px; margin-left: auto; margin-right: auto; }
+  .rewards-badge { max-width: 194px; }
+  .mild-wild { padding: 62px 0 70px; }
+
+  /* Footer */
+  .footer-main { padding: 44px 0; }
+  .footer-title { font-size: 26px; }
+
+  /* Inner pages – hero (image on top, text below) */
+  .page-hero .row { row-gap: 40px; }
+  .page-hero-content { padding-bottom: 15px; }
+  .page-hero-content { display: flex; align-items: center; gap: 60px; }
+  .page-hero-logo { flex: 1 1 0; padding-right: 0; }
+  .page-hero-copy { flex: 0 0 60%; }
+  .page-hero-copy > :first-child { margin-top: 0; }
+  .page-hero-logo img { max-width: 400px; }
+  .page-hero-title { font-size: 24px; }
+  .page-hero-media,
+  .page-hero-media img { height: 550px; }
+  .page-hero-media img { width: 100%; object-fit: cover; object-position: top left; }
+
+  /* Inner pages – two-column content stacks */
+  .page-split { margin: 40px 0 60px; }
+  .split-row { flex-direction: column; }
+  .split-block .page-text { columns: 2; column-gap: 50px; }
+  .page-buttons { justify-content: space-between; }
+  .page-buttons .btn-page { width: 49%; }
+
+  /* About us */
+  .about-drips-art { margin-top: 0; order: -1; }
+
+  /* Our food */
+  .food-hero-text { columns: 1; }
+  .food-ingredients-title { width: 400px; max-width: 100%; margin-top: 5px; }
+  .food-signature-art { text-align: center; }
+  .food-signature-art img { max-width: 95%; }
+  .food-signature-text { columns: 2; column-gap: 50px; }
+  .food-pattern-art { max-width: 95%; }
+  .food-band { padding: 10px 0; }
+  .food-fresh .split-row { gap: 50px; }
+  .food-fresh-art { align-items: flex-start; }
+  .food-fresh-art img { max-width: 89%; }
+  .food-fresh-block { margin-top: 0; }
+  .food-fresh-block .page-text { columns: 1; }
+  .food-fresh-title { width: 400px; max-width: 100%; }
+
+  /* Our stores */
+  .stores-find { margin: 40px 0 60px; }
+  .stores-find-intro { flex: 1 1 100%; gap: 15px; }
+  .stores-find-title { width: 400px; max-width: 400px; font-size: 30px; }
+  .stores-find-tagline { width: 180px; max-width: 180px; }
+  .stores-card-info { padding: 0 30px; }
+  .stores-card-map { flex-basis: 55%; }
+  .stores-card-buttons { flex-wrap: wrap; justify-content: space-between; }
+  .stores-card-btn,
+  .stores-card-btn.btn-page-accent { flex: 0 0 auto; max-width: none; font-size: 18px; }
+  .stores-soon { margin-top: 40px; }
+  .stores-soon .stores-row { gap: 0; }
+  .stores-soon-art { flex: 0 0 50%; text-align: left; }
+  .stores-soon-art img { max-width: 90%; }
+  .stores-soon-content { flex: 0 0 50%; }
+  .stores-soon-block { margin-top: 0; }
+  .stores-soon-title { width: 400px; max-width: 100%; }
+  .stores-franchise { margin: 0 0 60px; }
+  .stores-franchise .stores-row { flex-direction: column-reverse; gap: 50px; }
+  .stores-franchise-content {
+    flex: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 0;
+  }
+  .stores-franchise-block { display: contents; }
+  .stores-franchise-title { flex: 0 0 auto; width: 400px; max-width: 100%; }
+  .stores-franchise-text { flex: 0 0 50%; }
+  .stores-franchise-buttons { flex: 0 0 46%; flex-direction: column; justify-content: flex-end; margin-top: 0; }
+  .stores-franchise-buttons .btn-page { width: 100%; margin-bottom: 15px; }
+  .stores-franchise-art { flex: none; text-align: left; }
+
+  /* Franchise */
+  .franchise-intro .split-row { gap: 25px; }
+  .franchise-intro .split-col { gap: 0; }
+  .franchise-intro .split-block + .split-block { margin-top: 25px; }
+  .franchise-intro .split-block .page-text { columns: 1; }
+  .franchise-vision-title,
+  .franchise-success-title { width: 100%; }
+  .franchise-half-title { width: 400px; max-width: 100%; margin-top: 0; }
+  .franchise-grid { grid-template-columns: repeat(2, 1fr); }
+  .franchise-enquiry-text { padding: 0 5%; }
+  .franchise-form { margin: 60px 5% 0; }
+
+  /* Contact */
+  .contact-hero { padding: 15px; }
+  .contact-hero-inner { min-height: 550px; }
+  .contact-main { margin: 40px 0 60px; }
+  .contact-row { flex-direction: column; gap: 25px; }
+  .contact-title,
+  .contact-sub { text-align: center; }
+  .contact-intro { padding: 0 17px; }
+  .contact-form { margin: 0 40px; }
+  .contact-faq-intro { padding: 0 40px; }
+  .contact-taste-art { max-width: 75%; }
+
+  /* Menu – hero + sauce carousel */
+  .menu-hero-title { min-height: 400px; }
+  .menu-hero-title img { max-width: 90%; }
+  .menu-flip-sauce { height: 250px; }
+
+  /* Menu – bands */
+  .menu-band { padding: 25px 0; }
+  .menu-band-title-lg { margin: 0 80px; }
+
+  /* Menu – flip boxes */
+  .menu-flip-back { padding: 15px; }
+  .menu-flip-sauce .menu-flip-back { padding: 30px; }
+
+  /* Menu – burgers, wraps & pitas */
+  .menu-mains { margin: 10px 0 20px; }
+  .menu-mains-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+  .menu-flip-main { height: 360px; }
+  .menu-flip-main .menu-flip-text { font-size: 24px; }
+
+  /* Menu – signature collection */
+  .menu-signature-grid { grid-template-columns: repeat(2, 1fr); justify-items: center; }
+  .menu-signature-item { width: 100%; padding-top: 20px; }
+  .menu-item-title { font-size: 28px; }
+  .menu-flip-signature { height: 320px; }
+  .menu-flip-signature .menu-flip-text { font-size: 22px; }
+
+  /* Menu – strips, wings & trays */
+  .menu-trays { padding-top: 20px; margin-bottom: 0; }
+  .menu-trays-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+  .menu-flip-tray { height: 370px; }
+  .menu-flip-tray .menu-flip-text { font-size: 24px; }
+
+  /* Menu – loaded fries */
+  .menu-loaded { margin-top: 40px; min-height: 300px; padding: 20px 0 30px; }
+  .menu-loaded-grid { grid-template-columns: repeat(2, 1fr); gap: 0 30px; }
+  .menu-loaded-item { padding-top: 20px; }
+  .menu-flip-loaded { height: 270px; }
+  .menu-fries { margin: 20px 0 30px; }
+  .menu-fries-grid { grid-template-columns: repeat(2, 1fr); gap: 0 33px; }
+
+  /* Menu – sides */
+  .menu-sides-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Menu – desserts & buttons */
+  .menu-desserts { margin: 40px 0; }
+  .menu-desserts-left { width: 39%; }
+  .menu-desserts-right { width: 61%; }
+  .menu-cta { padding: 25px 0; }
+  .menu-cta-buttons { gap: 20px; justify-content: space-between; align-items: flex-end; }
+  .menu-cta-buttons .btn-page { width: 49%; }
+}
+
+@media (max-width: 767px) {
+  /* Hero */
+  .hero .carousel-control-prev i,
+  .hero .carousel-control-next i { font-size: 22px; }
+
+  /* Flavours */
+  .flavours-intro { padding: 36px 0 44px; }
+  .flavours-title { font-size: 24px; margin-bottom: 32px; }
+
+  /* Products, rewards, mild to wild */
+  .products { padding: 48px 0 64px; }
+  .rewards-badge { max-width: 180px; }
+  .mild-wild { padding: 48px 0 56px; }
+
+  /* Footer */
+  .footer-main { padding: 40px 0; }
+
+  /* Inner pages – hero */
+  .page-hero .row { row-gap: 20px; }
+  .page-hero-content { flex-direction: column; align-items: flex-start; gap: 15px; margin-top: 25px; padding-bottom: 0; }
+  .page-hero-logo,
+  .page-hero-copy { flex: none; width: 100%; }
+  .page-hero-logo img { max-width: 90%; }
+  .page-hero-media,
+  .page-hero-media img { height: 300px; }
+
+  /* Inner pages – two-column content */
+  .page-split { margin: 40px 0; }
+  .split-row { gap: 20px; }
+  .split-block .page-text,
+  .food-signature-text { columns: 1; }
+  .page-buttons { flex-direction: column; }
+  .page-buttons .btn-page { width: 100%; }
+
+  /* About us */
+  .about-hatched-title,
+  .about-shop-title { width: 90%; margin-top: 0; }
+  .about-eleven-title { width: 100%; margin-top: 10px; }
+  .about-triumph-art img { max-width: 90%; }
+
+  /* Our food */
+  .food-hero .page-hero-content { padding-bottom: 25px; }
+  .food-ingredients-title { width: 90%; }
+  .food-signature-art { text-align: left; }
+  .food-signature-art img { max-width: 90%; }
+  .food-band { padding: 20px 0; }
+  .food-fresh .split-row { gap: 20px; }
+  .food-fresh-block { margin-top: 20px; }
+
+  /* Our stores */
+  .stores-find {
+    margin: 20px 0 40px;
+    border-top: 15px solid var(--secondary);
+    border-bottom: 15px solid var(--secondary);
+  }
+  .stores-find-head { display: none; }
+  .stores-card { flex-direction: column; border: 0; padding-top: 40px; }
+  .stores-card-info { flex: none; gap: 10px; padding: 0; margin-bottom: 30px; }
+  .stores-card-title { width: 70%; }
+  .stores-card-buttons { flex-wrap: nowrap; gap: 10px; margin-top: 0; }
+  .stores-card-btn,
+  .stores-card-btn.btn-page-accent { flex: 1 1 50%; max-width: 50%; font-size: 16px; }
+  .stores-card-map { flex: none; margin-bottom: -10px; }
+  .stores-card-map iframe { height: 320px; }
+  .stores-soon { margin: 40px 0; }
+  .stores-soon .stores-row { flex-direction: column; gap: 20px; }
+  .stores-soon-art,
+  .stores-soon-content { flex: none; }
+  .stores-soon-block { margin-top: 20px; }
+  .stores-franchise { margin: 40px 0; }
+  .stores-franchise .stores-row { gap: 20px; }
+  .stores-franchise-content { margin-top: 20px; }
+  .stores-franchise-text,
+  .stores-franchise-buttons { flex: 0 0 100%; }
+  .stores-franchise-buttons { margin-top: 20px; }
+  .stores-franchise-buttons .btn-page { margin-bottom: 0; }
+
+  /* Franchise */
+  .franchise-hero-text { font-size: 24px; line-height: 1.2; }
+  .page-hero-copy > .franchise-hero-text { margin-top: 10px; }
+  .franchise-intro .split-row,
+  .franchise-intro .split-col { gap: 20px; }
+  .franchise-intro .split-block + .split-block { margin-top: 0; }
+  .franchise-half-title { width: 90%; }
+  .franchise-section-title { font-size: 36px; }
+  .franchise-section-subtitle span { font-size: 21px; }
+  .franchise-grid { grid-template-columns: 1fr; }
+  .franchise-benefit { flex-direction: column; align-items: center; text-align: center; }
+  .franchise-enquiry { padding: 60px 0; }
+  .franchise-enquiry-head,
+  .franchise-enquiry-head .franchise-section-title,
+  .franchise-enquiry-subtitle,
+  .franchise-enquiry-text { text-align: left; }
+  .franchise-enquiry-subtitle span { font-size: 21px; }
+  .franchise-enquiry-text { padding: 0; }
+  .franchise-form { grid-template-columns: 1fr; margin: 35px 0 0; }
+  .franchise-form-submit { text-align: left; }
+
+  /* Contact */
+  .contact-hero { padding: 10px; }
+  .contact-hero-inner { min-height: 300px; }
+  .contact-main { margin: 40px 0; }
+  .contact-row { gap: 20px; }
+  .contact-title { font-size: 36px; }
+  .contact-title,
+  .contact-sub { text-align: left; }
+  .contact-sub span { font-size: 21px; line-height: 21px; }
+  .contact-intro,
+  .contact-faq-intro { padding: 0; }
+  .contact-form { margin: 0; }
+  .contact-field-half { width: 100%; }
+  .contact-taste-art { max-width: 80%; }
+
+  /* Menu – hero + sauce carousel */
+  .menu-hero-title { min-height: 250px; }
+  .menu-hero-title img { margin: 60px 0; }
+  .menu-flip-sauce { height: 180px; }
+  .menu-flip-sauce .menu-flip-front,
+  .menu-flip-sauce .menu-flip-back { padding: 20px; }
+
+  /* Menu – bands */
+  .menu-band { padding: 30px 0; }
+  .menu-band-title { text-align: left; }
+  .menu-band-accent { padding: 10px 0; }
+  .menu-band-title-lg { font-size: 38px; margin: 0; }
+
+  /* Menu – titles */
+  .menu-section-title { font-size: 36px; text-align: left; }
+  .menu-item-title { font-size: 20px; }
+
+  /* Menu – flip text */
+  .menu-flip .menu-flip-text { font-size: 13px; line-height: 1.2; }
+  .menu-flip-sauce .menu-flip-text { font-size: 17px; line-height: 23px; }
+
+  /* Menu – burgers, wraps & pitas */
+  .menu-mains-grid { gap: 20px 5px; }
+  .menu-flip-main { height: 200px; }
+
+  /* Menu – signature collection */
+  .menu-signature { padding: 30px 0; }
+  .menu-signature-grid { gap: 0 5px; margin-top: 20px; }
+  .menu-signature-item { padding-top: 25px; }
+  .menu-flip-signature { height: 150px; }
+
+  /* Menu – strips, wings & trays */
+  .menu-strips { padding-top: 10px; }
+  .menu-strips-grid { gap: 15px 5px; }
+  .menu-trays { padding-top: 0; }
+  .menu-trays-grid { gap: 0 5px; }
+  .menu-flip-tray { height: 200px; }
+
+  /* Menu – loaded fries */
+  .menu-loaded { min-height: 120px; }
+  .menu-loaded::before { background-size: 858px auto; }
+  .menu-loaded-grid { gap: 0; }
+  .menu-loaded-item { padding-top: 25px; }
+  .menu-flip-loaded { height: 135px; }
+  .menu-fries { margin: 20px 0; }
+  .menu-fries-grid { gap: 10px 5px; }
+
+  /* Menu – sides */
+  .menu-sides { padding: 30px 0; }
+  .menu-sides-grid { gap: 10px; }
+
+  /* Menu – desserts, drinks & buttons */
+  .menu-desserts-row { flex-direction: column; gap: 15px; }
+  .menu-desserts-left,
+  .menu-desserts-right { width: 100%; }
+  .menu-drinks { padding-bottom: 30px; }
+  .menu-drinks-grid { gap: 3px; }
+  .menu-cta { padding: 20px 0; }
+  .menu-cta-buttons { flex-direction: column; align-items: stretch; }
+  .menu-cta-buttons .btn-page { width: 100%; }
+}
+
+@media (max-width: 575px) {
+  /* Flavours */
+  .drip-copy { font-size: 20px; letter-spacing: 0.5px; }
+
+  /* Footer – stack text above icons on phones */
+  .footer-connect-row { flex-direction: column; align-items: flex-start; }
+  .socials { margin-left: 0; }
+}

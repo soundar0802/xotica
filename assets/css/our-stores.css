@@ -1,0 +1,145 @@
+/* =========================================================
+   OUR STORES
+   ========================================================= */
+
+/* Hero */
+.stores-hero-title { max-width: 400px; }
+.stores-hero-text { margin-top: 20px; }
+
+/* Find a store */
+.stores-find { margin: 60px 0; }
+.stores-find-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.stores-find-intro {
+  flex: 0 1 50%;
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+.stores-round-logo img {
+  display: block;
+  width: 100%;
+  max-width: 75px;
+  height: auto;
+  transition: transform .4s;
+}
+.stores-round-logo:hover img { transform: rotate(360deg); }
+.stores-find-title {
+  width: 440px;
+  max-width: 440px;
+  margin: 0;
+  font-family: var(--font);
+  font-size: 38px;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: var(--primary);
+}
+.stores-find-aside {
+  flex: 0 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.stores-find-tagline {
+  width: 270px;
+  max-width: 270px;
+  margin: 0 0 2px;
+  font-family: var(--font);
+  font-size: 17px;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: var(--primary);
+  text-align: right;
+}
+
+/* Store card – details + map */
+.stores-card {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #E3E3E3;
+}
+.stores-card-info {
+  flex: 0 1 45%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 40px;
+}
+.stores-card-title { width: 70%; }
+.stores-card-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+.stores-card-btn {
+  flex: 0 1 50%;
+  font-size: 20px;
+}
+.stores-card-btn.btn-page-accent { flex: 1 0 auto; max-width: 50%; }
+.stores-card-map {
+  flex: 0 1 60%;
+  min-width: 0;
+}
+.stores-card-map iframe {
+  display: block;
+  width: 100%;
+  height: 388px;
+  border: 0;
+}
+
+/* Shared two-column rows (coming soon / franchise) */
+.stores-row {
+  display: flex;
+  gap: 60px;
+}
+
+/* Coming soon */
+.stores-soon { margin-top: 80px; }
+.stores-soon-art {
+  flex: 0 1 40%;
+  text-align: center;
+}
+.stores-soon-art img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.stores-soon-content {
+  flex: 0 1 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.stores-soon-block { margin-top: -40px; }
+.stores-soon-title { width: 70%; }
+
+/* Franchise */
+.stores-franchise { margin: 30px 0 60px; }
+.stores-franchise-content {
+  flex: 0 1 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.stores-franchise-title { width: 70%; }
+.stores-franchise-buttons { margin-top: 10px; }
+.stores-franchise-art {
+  flex: 0 1 60%;
+  text-align: center;
+}
+.stores-franchise-art img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
