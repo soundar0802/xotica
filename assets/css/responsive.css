@@ -117,9 +117,6 @@
   .page-buttons { justify-content: space-between; }
   .page-buttons .btn-page { width: 49%; }
 
-  /* About us */
-  .about-drips-art { margin-top: 0; order: -1; }
-
   /* Our food */
   .food-hero-text { columns: 1; }
   .food-ingredients-title { width: 400px; max-width: 100%; margin-top: 5px; }
@@ -279,10 +276,7 @@
   .page-buttons .btn-page { width: 100%; }
 
   /* About us */
-  .about-hatched-title,
-  .about-shop-title { width: 90%; margin-top: 0; }
-  .about-eleven-title { width: 100%; margin-top: 10px; }
-  .about-triumph-art img { max-width: 90%; }
+  .about-story-block { margin-top: 10px; }
 
   /* Our food */
   .food-hero .page-hero-content { padding-bottom: 25px; }
