@@ -1,14 +1,15 @@
-// Main website address, used by the brand page's header/footer links when it
-// is hosted on its own domain, e.g. "https://xoticakebabs.co.uk/".
-// Leave empty to keep relative links.
 const MAIN_SITE_URL = "";
+
+// Project root (main.js lives in assets/js/), so pages in sub-folders such as
+// brand/ can still load the shared header and footer
+const SITE_ROOT = new URL("../../", document.currentScript.src);
 
 // Load a partial HTML file into the element with the given id
 async function loadPartial(id, url) {
   const placeholder = document.getElementById(id);
   if (!placeholder) return;
   try {
-    const res = await fetch(url);
+    const res = await fetch(new URL(url, SITE_ROOT));
     if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
     // Replace the placeholder itself so the header stays a direct child of
     // .page-wrapper (keeps .sticky-top working)
@@ -241,12 +242,17 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
-  // On the brand page, point header/footer links at the main website
-  if (MAIN_SITE_URL && document.body.classList.contains("bg-page")) {
-    document.querySelectorAll(".site-header a[href], .site-footer a[href]").forEach((link) => {
-      const href = link.getAttribute("href");
-      if (/^(https?:|mailto:|tel:|#)/.test(href)) return;
-      link.href = new URL(href, MAIN_SITE_URL).href;
+  // Pages outside the root (e.g. brand/) resolve the partials' links and images
+  // from the project root; on the brand page, links go to MAIN_SITE_URL once set
+  const onBrandPage = document.body.classList.contains("bg-page");
+  const isRootPage = new URL(".", location.href).href === SITE_ROOT.href;
+  if (!isRootPage || (MAIN_SITE_URL && onBrandPage)) {
+    document.querySelectorAll(".site-header [href], .site-header [src], .site-footer [href], .site-footer [src]").forEach((el) => {
+      const attr = el.hasAttribute("href") ? "href" : "src";
+      const value = el.getAttribute(attr);
+      if (/^(https?:|mailto:|tel:|#|\/)/.test(value)) return;
+      const base = attr === "href" && MAIN_SITE_URL && onBrandPage ? MAIN_SITE_URL : SITE_ROOT;
+      el.setAttribute(attr, new URL(value, base).href);
     });
   }
 
