@@ -4,8 +4,8 @@
 
 /* Hero – red version */
 .food-hero { background: var(--primary); }
-.food-hero .page-hero-title { color: #fff; margin-top: 35px; }
-.food-hero-text { color: #fff; margin-top: 20px; }
+.food-hero .page-hero-title { color: var(--white); margin-top: 35px; }
+.food-hero-text { color: var(--white); margin-top: 20px; }
 
 /* Fresh & signature */
 .food-ingredients-title { width: 50%; margin-top: 20px; }
@@ -44,7 +44,7 @@
   padding: 20px 0;
 }
 .food-band-title {
-  color: #fff;
+  color: var(--white);
   text-align: center;
   margin: 0;
 }

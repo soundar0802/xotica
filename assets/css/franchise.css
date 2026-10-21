@@ -8,7 +8,7 @@
   font-size: 28px;
   font-weight: 500;
   line-height: 1.5;
-  color: #fff;
+  color: var(--white);
   margin: 20px 0 14.4px;
 }
 
@@ -26,7 +26,7 @@
   text-transform: uppercase;
   line-height: 1.2;
   text-align: center;
-  color: #fff;
+  color: var(--white);
   margin: 0;
 }
 
@@ -41,7 +41,7 @@
   font-size: 18px;
   line-height: 27px;
   text-align: center;
-  color: #fff;
+  color: var(--white);
 }
 .franchise-section-subtitle span {
   font-family: var(--font);
@@ -73,13 +73,13 @@
   font-style: italic;
   text-transform: capitalize;
   line-height: 1.2;
-  color: #fff;
+  color: var(--white);
   margin: 8px 0 5px;
 }
 .franchise-benefit-body p {
   font-size: 18px;
   line-height: 1.5;
-  color: #fff;
+  color: var(--white);
   margin: 0;
 }
 
@@ -112,14 +112,14 @@
   font-family: var(--font);
   font-size: 18px;
   line-height: 1.4;
-  color: #000;
-  background: #fff;
-  border: 1px solid #000;
+  color: var(--black);
+  background: var(--white);
+  border: 1px solid var(--black);
   border-radius: 0;
 }
 .franchise-form input:focus {
   outline: 0;
-  box-shadow: inset 0 0 0 1px #000;
+  box-shadow: inset 0 0 0 1px var(--black);
 }
 .franchise-form-submit { text-align: center; }
 .franchise-form-button {
@@ -131,11 +131,11 @@
   font-style: italic;
   text-transform: uppercase;
   line-height: 1;
-  color: #fff;
+  color: var(--white);
   background: var(--primary);
   border: 0;
   border-radius: 0;
   transition: all .3s;
 }
 .franchise-form-button:hover,
-.franchise-form-button:focus-visible { color: #fff; }
+.franchise-form-button:focus-visible { color: var(--white); }

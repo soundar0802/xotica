@@ -27,7 +27,6 @@
   .sauce-info p { font-size: 14px; }
 
   /* Products, rewards, mild to wild */
-  .products { padding: 91px 0 117px; }
   .rewards-text { font-size: 25px; max-width: 410px; }
   .mild-wild { padding: 91px 0 104px; }
 
@@ -49,7 +48,6 @@
   .sauce-info h4 { font-size: 18px; }
 
   /* Products, rewards, mild to wild */
-  .products { padding: 77px 0 99px; }
   .rewards { padding: 33px 0; }
   .rewards-text { font-size: 21px; max-width: 345px; }
   .mild-wild { padding: 77px 0 88px; }
@@ -69,7 +67,7 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background: #fff;
+    background: var(--white);
     box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
   }
   .navbar-collapse .navbar-nav { padding: 12px 16px 16px; }
@@ -87,7 +85,6 @@
   .sauce-tile { width: 180px; }
 
   /* Products, rewards, mild to wild */
-  .products { padding: 62px 0 79px; }
   .rewards { padding: 29px 0; }
   .rewards-text { font-size: 18px; max-width: 300px; margin-left: auto; margin-right: auto; }
   .rewards-badge { max-width: 194px; }
@@ -251,7 +248,6 @@
   .flavours-title { font-size: 24px; margin-bottom: 32px; }
 
   /* Products, rewards, mild to wild */
-  .products { padding: 48px 0 64px; }
   .rewards-badge { max-width: 180px; }
   .mild-wild { padding: 48px 0 56px; }
 
@@ -416,7 +412,7 @@
 @media (max-width: 575px) {
   /* Flavours */
   .drip-copy { font-size: 20px; letter-spacing: 0.5px; }
-
+  .hero .carousel-item img {height: 200px;object-fit: cover;}
   /* Footer – stack text above icons on phones */
   .footer-connect-row { flex-direction: column; align-items: flex-start; }
   .socials { margin-left: 0; }

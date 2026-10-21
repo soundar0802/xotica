@@ -17,13 +17,13 @@
 .menu-section-title {
   font-size: 50px;
   line-height: 1.1;
-  color: #fff;
+  color: var(--white);
   text-align: center;
 }
 .menu-item-title {
   font-size: 32px;
   line-height: 1;
-  color: #fff;
+  color: var(--white);
   text-align: center;
 }
 
@@ -146,7 +146,7 @@
   position: relative;
   overflow: hidden;
   min-height: 180px;
-  background-image: linear-gradient(180deg, rgba(206, 19, 22, 0) 50%, rgba(48, 5, 6, .54) 100%);
+  background-image: linear-gradient(180deg, rgba(225, 46, 30, 0) 50%, rgba(48, 5, 6, .54) 100%);
 }
 .menu-sauces-track {
   display: flex;
@@ -188,7 +188,7 @@
 .menu-band-title {
   font-size: 32px;
   line-height: 1.2;
-  color: #fff;
+  color: var(--white);
   text-align: center;
 }
 .menu-band-accent { background: var(--secondary); }
@@ -219,7 +219,7 @@
 }
 .menu-flip-signature { height: 250px; }
 .menu-flip-signature .menu-flip-text,
-.menu-flip-loaded .menu-flip-text { color: #fff; }
+.menu-flip-loaded .menu-flip-text { color: var(--white); }
 
 /* ---------- Strips & wings ---------- */
 .menu-strips { padding-top: 30px; }
@@ -294,7 +294,7 @@
 .menu-side-title {
   font-size: 18px;
   line-height: 1;
-  color: #fff;
+  color: var(--white);
   text-align: center;
 }
 
@@ -346,7 +346,7 @@
   gap: 30px;
 }
 .menu-btn-white {
-  background: #fff;
+  background: var(--white);
   color: var(--primary);
 }
 .menu-btn-white:hover,
