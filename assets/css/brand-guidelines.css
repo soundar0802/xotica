@@ -16,7 +16,7 @@
   padding: 140px 0 120px;
   color: var(--white);
   background: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .7)),
-              url("../images/brand/photos/shop-front.jpg") center / cover no-repeat fixed;
+              url("../images/brand/photos/shop-front.jpg") center / cover no-repeat;
 }
 .bg-hero-title {
   font-size: clamp(36px, 6vw, 68px);
