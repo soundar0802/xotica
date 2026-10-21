@@ -1,0 +1,373 @@
+/* =========================================================
+   BRAND GUIDELINES PAGE
+   ========================================================= */
+.bg-page {
+  --bg-cream: #f6f4f0;
+  --bg-line: #e5e2dc;
+  --bg-ink: #2b2b2b;
+  background: var(--white);
+  color: var(--bg-ink);
+}
+.bg-page [id] { scroll-margin-top: var(--header-h); }
+
+/* ---------- Hero ---------- */
+.bg-hero {
+  position: relative;
+  padding: 140px 0 120px;
+  color: var(--white);
+  background: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .7)),
+              url("../images/brand/photos/shop-front.jpg") center / cover no-repeat fixed;
+}
+.bg-hero-title {
+  font-size: clamp(36px, 6vw, 68px);
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+.bg-hero-copy { max-width: 620px; margin: 0 auto 32px; font-size: 18px; opacity: .92; }
+
+.bg-btn {
+  background: var(--primary);
+  color: var(--white);
+  border: 2px solid var(--primary);
+  border-radius: 999px;
+  padding: 10px 28px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+}
+.bg-btn:hover, .bg-btn:focus-visible { background: var(--white); color: var(--primary); border-color: var(--white); }
+.bg-alt .bg-btn:hover, .bg-alt .bg-btn:focus-visible { border-color: var(--primary); }
+
+/* ---------- Sections ---------- */
+.bg-section { padding: 80px 0; }
+.bg-alt { background: var(--bg-cream); }
+.page-wrapper .container.bg-narrow { max-width: 960px; }
+.bg-section p { font-size: 16px; line-height: 1.7; }
+
+.bg-title {
+  text-align: center;
+  font-size: clamp(28px, 3.5vw, 38px);
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+.bg-title::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin: 14px auto 0;
+  background: var(--secondary);
+}
+.bg-title span { color: var(--primary); font-weight: 900; font-style: italic; text-transform: uppercase; }
+.bg-subtitle { font-size: 18px; font-weight: 700; margin-bottom: 20px; text-align: center; }
+
+.bg-overview-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 40px;
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+  font-weight: 700;
+}
+.bg-overview-list i { color: var(--primary); margin-right: 6px; font-size: 13px; }
+
+/* ---------- Logos ---------- */
+.bg-logo-hero { text-align: center; margin-bottom: 48px; }
+.bg-logo-hero img { width: min(440px, 80%); height: auto; }
+
+.bg-anatomy h4 {
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+.bg-anatomy p { font-size: 14px; margin: 0; }
+
+.bg-variant {
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 12%;
+}
+.bg-variant img, .bg-dont img { max-width: 100%; max-height: 100%; height: auto; }
+.bg-variants figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  text-align: center;
+  color: #6b6b6b;
+}
+
+/* ---------- Clear space ---------- */
+.bg-clearspace {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  padding: 32px;
+  background-color: var(--white);
+  background-image:
+    linear-gradient(var(--bg-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bg-line) 1px, transparent 1px);
+  background-size: 24px 24px;
+  border: 1px solid var(--bg-line);
+}
+.bg-clearspace-zone {
+  position: relative;
+  padding: 48px;
+  outline: 2px dashed rgba(225, 46, 30, .5);
+  outline-offset: -1px;
+}
+.bg-clearspace-zone img { display: block; width: min(380px, 60vw); height: auto; outline: 1px solid rgba(0, 0, 0, .15); }
+.bg-x {
+  position: absolute;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--primary);
+}
+.bg-x-top    { top: 14px; left: 50%; transform: translateX(-50%); }
+.bg-x-bottom { bottom: 14px; left: 50%; transform: translateX(-50%); }
+.bg-x-left   { left: 18px; top: 50%; transform: translateY(-50%); }
+.bg-x-right  { right: 18px; top: 50%; transform: translateY(-50%); }
+
+.bg-minsize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.bg-minsize div {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 16px;
+  border: 1px solid var(--bg-line);
+  background: var(--white);
+  font-size: 14px;
+}
+.bg-minsize span { color: #6b6b6b; }
+
+/* ---------- Typography ---------- */
+.bg-font-name { font-size: 44px !important; font-weight: 900; font-style: italic; color: var(--primary); line-height: 1 !important; }
+.bg-font-note { color: #555; }
+.bg-glyphs { font-size: 28px !important; font-weight: 500; line-height: 1.4 !important; }
+
+.bg-weights { list-style: none; padding: 0; margin: 0; columns: 2; column-gap: 32px; }
+.bg-weights li {
+  font-size: 20px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--bg-line);
+  break-inside: avoid;
+}
+
+.bg-type-scale { margin-top: 56px; display: grid; gap: 24px; }
+.bg-type-scale span { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #888; }
+.bg-type-scale p { margin: 4px 0 0; }
+.bg-ts-h1 { font-size: clamp(34px, 5vw, 56px) !important; font-weight: 900; font-style: italic; text-transform: uppercase; color: var(--primary); line-height: 1 !important; }
+.bg-ts-h2 { font-size: 28px !important; font-weight: 700; text-transform: uppercase; }
+.bg-ts-body { font-size: 18px !important; }
+
+/* ---------- Colours ---------- */
+.bg-hint { font-size: 14px !important; color: #777; margin-top: -24px; }
+.bg-swatches { display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; }
+.bg-swatch {
+  background: none;
+  border: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+.bg-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .12);
+  transition: transform .2s ease;
+}
+.bg-chip-light { border: 1px solid var(--bg-line); }
+.bg-chip em { font-style: normal; font-size: 12px; font-weight: 500; color: rgba(255, 255, 255, .9); }
+.bg-chip-light em { color: #666; }
+.bg-swatch-lg .bg-chip { width: 150px; height: 150px; }
+.bg-swatch:hover .bg-chip, .bg-swatch:focus-visible .bg-chip { transform: scale(1.06); }
+.bg-swatch strong { display: block; font-size: 15px; margin-bottom: 6px; }
+.bg-swatch dl { display: grid; text-align: left; grid-template-columns: auto auto; gap: 2px 12px; margin: 0; font-size: 13px; }
+.bg-swatch dt { font-weight: 700; }
+.bg-swatch dd { margin: 0; color: #555; }
+.bg-note { margin-top: 32px; font-size: 14px !important; color: #555; text-align: center; }
+
+/* ---------- Usage ---------- */
+.bg-usage-head {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 56px 0 24px;
+}
+.bg-usage-head:first-of-type { margin-top: 0; }
+.bg-usage-head i { margin-right: 6px; }
+.bg-ok { color: #1f9d55; }
+.bg-no { color: var(--primary); }
+
+.bg-photo {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.bg-photo > img:last-child {
+  position: absolute;
+  left: 4%;
+  bottom: 5%;
+  width: 26%;
+  height: auto;
+}
+.bg-photo-food {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  width: 56%;
+  height: auto;
+  transform: translateY(-50%);
+}
+
+.bg-tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.bg-tile {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+  font-size: clamp(16px, 2.6vw, 28px);
+  overflow-wrap: anywhere;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: .95;
+}
+
+.bg-dont {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14%;
+  background: var(--white);
+  border: 1px solid var(--bg-line);
+  overflow: hidden;
+}
+.bg-dont::after {
+  content: "\F62A";
+  font-family: "bootstrap-icons";
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 22px;
+  color: var(--primary);
+  background: var(--white);
+  border-radius: 50%;
+  line-height: 1;
+}
+.bg-donts p { margin: 8px 0 0; font-size: 13px !important; text-align: center; color: #555; }
+
+/* ---------- Downloads & footer ---------- */
+.bg-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px 32px;
+}
+.bg-downloads div { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.bg-downloads small { color: #777; font-size: 12px; }
+
+.bg-to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 50%;
+  z-index: 1040;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
+}
+.bg-to-top:hover { background: var(--secondary); color: var(--white); }
+
+.bg-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translate(-50%, 20px);
+  background: #111;
+  color: var(--white);
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+  z-index: 1050;
+}
+.bg-toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 767.98px) {
+  /* Centre all page content on mobile */
+  .bg-page main { text-align: center; }
+  .bg-overview-list { justify-content: center; }
+  .bg-minsize { flex-direction: column; }
+  .bg-minsize div { align-items: center; }
+
+  .bg-downloads {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 12px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .bg-downloads .bg-btn {
+    width: 100%;
+    padding: 10px 8px;
+    font-size: 12px;
+    letter-spacing: .3px;
+  }
+  .bg-section { padding: 56px 0; }
+  .bg-hero { padding: 96px 0 80px; }
+  .bg-hero-copy { font-size: 16px; }
+  .bg-weights { columns: 1; }
+  .bg-clearspace { padding: 16px; }
+  .bg-clearspace-zone { padding: 32px; }
+  .bg-x-top { top: 8px; } .bg-x-bottom { bottom: 8px; }
+  .bg-x-left { left: 10px; } .bg-x-right { right: 10px; }
+  .bg-chip { width: 90px; height: 90px; }
+  .bg-swatches { gap: 20px; }
+  .bg-tiles { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 358.98px) {
+  .bg-downloads { grid-template-columns: 1fr; }
+}

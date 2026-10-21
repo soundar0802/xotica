@@ -1,3 +1,8 @@
+// Main website address, used by the brand page's header/footer links when it
+// is hosted on its own domain, e.g. "https://xoticakebabs.co.uk/".
+// Leave empty to keep relative links.
+const MAIN_SITE_URL = "";
+
 // Load a partial HTML file into the element with the given id
 async function loadPartial(id, url) {
   const placeholder = document.getElementById(id);
@@ -235,6 +240,15 @@ document.addEventListener("DOMContentLoaded", async () => {
       link.setAttribute("aria-current", "page");
     }
   });
+
+  // On the brand page, point header/footer links at the main website
+  if (MAIN_SITE_URL && document.body.classList.contains("bg-page")) {
+    document.querySelectorAll(".site-header a[href], .site-footer a[href]").forEach((link) => {
+      const href = link.getAttribute("href");
+      if (/^(https?:|mailto:|tel:|#)/.test(href)) return;
+      link.href = new URL(href, MAIN_SITE_URL).href;
+    });
+  }
 
   // Footer year (set after the footer partial is loaded)
   const year = document.getElementById("year");
