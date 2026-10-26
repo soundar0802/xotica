@@ -16,7 +16,7 @@
   padding: 140px 0 120px;
   color: var(--white);
   background: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .7)),
-              url("../images/brand/photos/shop-front.jpg") center / cover no-repeat;
+              url("../images/brand/photos/shop-front.jpg") center / cover no-repeat fixed;
 }
 .bg-hero-title {
   font-size: clamp(36px, 6vw, 68px);
@@ -27,6 +27,14 @@
   margin-bottom: 20px;
 }
 .bg-hero-copy { max-width: 620px; margin: 0 auto 32px; font-size: 18px; opacity: .92; }
+.bg-hero-eyebrow {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin-bottom: 16px;
+}
 
 .bg-btn {
   background: var(--primary);
@@ -64,6 +72,33 @@
 }
 .bg-title span { color: var(--primary); font-weight: 900; font-style: italic; text-transform: uppercase; }
 .bg-subtitle { font-size: 18px; font-weight: 700; margin-bottom: 20px; text-align: center; }
+.bg-subtitle-spaced { margin-top: 48px; }
+.bg-feature-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 6px solid var(--white);
+  box-shadow: 14px 14px 0 var(--secondary);
+}
+.bg-section p.bg-lead { font-size: 20px; font-weight: 700; font-style: italic; color: var(--primary); text-align: center; }
+
+.bg-statement {
+  margin-top: 56px;
+  padding: 40px 24px;
+  text-align: center;
+  color: var(--white);
+  background: var(--primary);
+  border-radius: 12px;
+}
+.bg-section .bg-statement-title {
+  font-size: clamp(26px, 4vw, 40px);
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.bg-section .bg-statement-copy { margin: 0; font-size: 18px; opacity: .92; }
 
 .bg-overview-list {
   display: flex;
@@ -357,6 +392,7 @@
     letter-spacing: .3px;
   }
   .bg-section { padding: 56px 0; }
+  .bg-feature-img { width: calc(100% - 10px); box-shadow: 10px 10px 0 var(--secondary); }
   .bg-hero { padding: 96px 0 80px; }
   .bg-hero-copy { font-size: 16px; }
   .bg-weights { columns: 1; }

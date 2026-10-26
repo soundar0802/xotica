@@ -12,10 +12,20 @@
   margin: 20px 0 14.4px;
 }
 
-/* Why Xotica – heading widths */
-.franchise-vision-title { width: 250px; }
-.franchise-success-title { width: 200px; color: var(--secondary); }
-.franchise-half-title { width: 50%; margin-top: 20px; }
+.franchise-hero-title { color: var(--white); font-size: 46px; margin-top: 0; }
+
+/* Intro / built to work together / closing copy */
+.franchise-intro,
+.franchise-together { padding: 80px 0; }
+.franchise-closing { padding: 80px 0; background: var(--primary); }
+.franchise-intro-text {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+.franchise-together-title { color: var(--primary); margin-bottom: 30px; }
+.franchise-closing .franchise-intro-text { margin-top: 30px; color: var(--white); }
+.franchise-closing .franchise-intro-text p { margin: 0; }
 
 /* Shared section headings */
 .franchise-section-title {
@@ -65,6 +75,10 @@
   flex: 0 0 67px;
   width: 67px;
   height: 67px;
+  font-size: 46px;
+  line-height: 67px;
+  text-align: center;
+  color: var(--secondary);
 }
 .franchise-benefit-body h3 {
   font-family: var(--font);

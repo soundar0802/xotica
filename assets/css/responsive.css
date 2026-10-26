@@ -32,6 +32,7 @@
 
   /* Footer */
   .footer-title { font-size: 34px; }
+  .franchise-benefit-body p {font-size: 16px;}
 }
 
 @media (max-width: 1199px) {
@@ -46,11 +47,12 @@
   .sauce-tile { width: 187px; }
   .sauce-info { padding: 12px 16px; }
   .sauce-info h4 { font-size: 18px; }
-
+  .franchise-grid {gap: 30px;}
   /* Products, rewards, mild to wild */
   .rewards { padding: 33px 0; }
   .rewards-text { font-size: 21px; max-width: 345px; }
   .mild-wild { padding: 77px 0 88px; }
+  .franchise-benefit-body p {font-size: 14px;}
 
   /* Footer */
   .footer-main { padding: 55px 0; }
@@ -115,30 +117,27 @@
   .page-buttons .btn-page { width: 49%; }
 
   /* Our food */
-  .food-hero-text { columns: 1; }
-  .food-ingredients-title { width: 400px; max-width: 100%; margin-top: 5px; }
-  .food-signature-art { text-align: center; }
-  .food-signature-art img { max-width: 95%; }
-  .food-signature-text { columns: 2; column-gap: 50px; }
-  .food-pattern-art { max-width: 95%; }
-  .food-band { padding: 10px 0; }
-  .food-fresh .split-row { gap: 50px; }
-  .food-fresh-art { align-items: flex-start; }
-  .food-fresh-art img { max-width: 89%; }
-  .food-fresh-block { margin-top: 0; }
-  .food-fresh-block .page-text { columns: 1; }
-  .food-fresh-title { width: 400px; max-width: 100%; }
+  .food-hero { padding: 60px 0 80px; }
+  .food-hero-title { font-size: 52px; }
+  .food-hero-media { max-width: 480px; }
+  .food-section,
+  .food-sauces { padding: 70px 0; }
+  .food-section-title { font-size: 40px; }
+  .food-dishes { gap: 70px; }
+  .dish { grid-template-columns: 1fr; gap: 40px; }
+  .dish:nth-child(even) .dish-media { order: 0; }
+  .dish-media { max-width: 560px; }
+  .dish:nth-child(even) .dish-media img { box-shadow: 14px 14px 0 var(--secondary); }
+  .dish-num { font-size: 60px; }
+  .sauce-cards { grid-template-columns: repeat(2, 1fr); }
 
   /* Our stores */
   .stores-find { margin: 40px 0 60px; }
   .stores-find-intro { flex: 1 1 100%; gap: 15px; }
   .stores-find-title { width: 400px; max-width: 400px; font-size: 30px; }
   .stores-find-tagline { width: 180px; max-width: 180px; }
-  .stores-card-info { padding: 0 30px; }
-  .stores-card-map { flex-basis: 55%; }
-  .stores-card-buttons { flex-wrap: wrap; justify-content: space-between; }
-  .stores-card-btn,
-  .stores-card-btn.btn-page-accent { flex: 0 0 auto; max-width: none; font-size: 18px; }
+  .stores-item { padding: 30px; }
+  .stores-card-btn { font-size: 18px; }
   .stores-soon { margin-top: 40px; }
   .stores-soon .stores-row { gap: 0; }
   .stores-soon-art { flex: 0 0 50%; text-align: left; }
@@ -163,13 +162,7 @@
   .stores-franchise-art { flex: none; text-align: left; }
 
   /* Franchise */
-  .franchise-intro .split-row { gap: 25px; }
-  .franchise-intro .split-col { gap: 0; }
-  .franchise-intro .split-block + .split-block { margin-top: 25px; }
-  .franchise-intro .split-block .page-text { columns: 1; }
-  .franchise-vision-title,
-  .franchise-success-title { width: 100%; }
-  .franchise-half-title { width: 400px; max-width: 100%; margin-top: 0; }
+  .franchise-hero-title { font-size: 36px; margin-top: 30px; }
   .franchise-grid { grid-template-columns: repeat(2, 1fr); }
   .franchise-enquiry-text { padding: 0 5%; }
   .franchise-form { margin: 60px 5% 0; }
@@ -186,59 +179,46 @@
   .contact-faq-intro { padding: 0 40px; }
   .contact-taste-art { max-width: 75%; }
 
-  /* Menu – hero + sauce carousel */
+
+  /* Menu */
   .menu-hero-title { min-height: 400px; }
-  .menu-hero-title img { max-width: 90%; }
+  .menu-hero-heading { font-size: 84px; }
   .menu-flip-sauce { height: 250px; }
-
-  /* Menu – bands */
   .menu-band { padding: 25px 0; }
-  .menu-band-title-lg { margin: 0 80px; }
-
-  /* Menu – flip boxes */
   .menu-flip-back { padding: 15px; }
   .menu-flip-sauce .menu-flip-back { padding: 30px; }
-
-  /* Menu – burgers, wraps & pitas */
-  .menu-mains { margin: 10px 0 20px; }
-  .menu-mains-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
-  .menu-flip-main { height: 360px; }
-  .menu-flip-main .menu-flip-text { font-size: 24px; }
-
-  /* Menu – signature collection */
-  .menu-signature-grid { grid-template-columns: repeat(2, 1fr); justify-items: center; }
-  .menu-signature-item { width: 100%; padding-top: 20px; }
-  .menu-item-title { font-size: 28px; }
-  .menu-flip-signature { height: 320px; }
-  .menu-flip-signature .menu-flip-text { font-size: 22px; }
-
-  /* Menu – strips, wings & trays */
-  .menu-trays { padding-top: 20px; margin-bottom: 0; }
-  .menu-trays-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
-  .menu-flip-tray { height: 370px; }
-  .menu-flip-tray .menu-flip-text { font-size: 24px; }
-
-  /* Menu – loaded fries */
-  .menu-loaded { margin-top: 40px; min-height: 300px; padding: 20px 0 30px; }
-  .menu-loaded-grid { grid-template-columns: repeat(2, 1fr); gap: 0 30px; }
-  .menu-loaded-item { padding-top: 20px; }
-  .menu-flip-loaded { height: 270px; }
-  .menu-fries { margin: 20px 0 30px; }
-  .menu-fries-grid { grid-template-columns: repeat(2, 1fr); gap: 0 33px; }
-
-  /* Menu – sides */
-  .menu-sides-grid { grid-template-columns: repeat(2, 1fr); }
-
-  /* Menu – desserts & buttons */
-  .menu-desserts { margin: 40px 0; }
-  .menu-desserts-left { width: 39%; }
-  .menu-desserts-right { width: 61%; }
+  .menu-mains { margin: 40px 0 50px; }
+  .menu-mains-grid { grid-template-columns: repeat(2, 1fr); }
+  .menu-flip-main .menu-flip-text { font-size: 22px; }
+  .menu-signature-grid { grid-template-columns: repeat(2, 1fr); gap: 30px 20px; }
+  .menu-item-title { font-size: 24px; }
+  .menu-flip-signature .menu-flip-text { font-size: 20px; }
   .menu-cta { padding: 25px 0; }
   .menu-cta-buttons { gap: 20px; justify-content: space-between; align-items: flex-end; }
   .menu-cta-buttons .btn-page { width: 49%; }
 }
 
 @media (max-width: 767px) {
+  /* Menu */
+  .menu-hero-title { min-height: 250px; }
+  .menu-hero-heading { margin: 60px 0; font-size: 42px; letter-spacing: -1px; }
+  .menu-flip-sauce { height: 180px; }
+  .menu-flip-sauce .menu-flip-front,
+  .menu-flip-sauce .menu-flip-back { padding: 20px; }
+  .menu-band { padding: 30px 0; }
+  .menu-band-title { font-size: 26px; text-align: left; }
+  .menu-section-title { font-size: 36px; text-align: left; }
+  .menu-item-title { font-size: 18px; margin-bottom: 10px; }
+  .menu-flip .menu-flip-text { font-size: 13px; line-height: 1.2; }
+  .menu-flip-sauce .menu-flip-text { font-size: 17px; line-height: 23px; }
+  .menu-mains-grid { gap: 25px 10px; }
+  .menu-signature { padding: 40px 0; }
+  .menu-signature-grid { gap: 25px 10px; margin-top: 25px; }
+  .menu-flip-signature .menu-flip-back { padding: 12px; }
+  .menu-cta { padding: 20px 0; }
+  .menu-cta-buttons { flex-direction: column; align-items: stretch; }
+  .menu-cta-buttons .btn-page { width: 100%; }
+
   /* Hero */
   .hero .carousel-control-prev i,
   .hero .carousel-control-next i { font-size: 22px; }
@@ -266,8 +246,7 @@
   /* Inner pages – two-column content */
   .page-split { margin: 40px 0; }
   .split-row { gap: 20px; }
-  .split-block .page-text,
-  .food-signature-text { columns: 1; }
+  .split-block .page-text { columns: 1; }
   .page-buttons { flex-direction: column; }
   .page-buttons .btn-page { width: 100%; }
 
@@ -275,13 +254,24 @@
   .about-story-block { margin-top: 10px; }
 
   /* Our food */
-  .food-hero .page-hero-content { padding-bottom: 25px; }
-  .food-ingredients-title { width: 90%; }
-  .food-signature-art { text-align: left; }
-  .food-signature-art img { max-width: 90%; }
-  .food-band { padding: 20px 0; }
-  .food-fresh .split-row { gap: 20px; }
-  .food-fresh-block { margin-top: 20px; }
+  .food-hero { padding: 40px 0 70px; }
+  .food-hero-title { font-size: 40px; }
+  .food-hero-media { margin: 0 18px 0 6px; }
+  .food-hero-tub { left: -10px; bottom: -30px; }
+  .food-section,
+  .food-sauces { padding: 56px 0; }
+  .food-section-head { margin-bottom: 40px; }
+  .food-section-title { font-size: 34px; }
+  .food-dishes { gap: 56px; }
+  .dish { gap: 28px; }
+  .dish-title { font-size: 30px; }
+  .dish-tagline { font-size: 18px; }
+  .dish-media img,
+  .dish:nth-child(even) .dish-media img { box-shadow: 10px 10px 0 var(--secondary); }
+  .sauce-cards { gap: 16px; }
+  .sauce-card-body { padding: 14px; }
+  .sauce-card-body h3 { font-size: 16px; }
+  .food-pattern { padding: 70px 0; }
 
   /* Our stores */
   .stores-find {
@@ -290,14 +280,9 @@
     border-bottom: 15px solid var(--secondary);
   }
   .stores-find-head { display: none; }
-  .stores-card { flex-direction: column; border: 0; padding-top: 40px; }
-  .stores-card-info { flex: none; gap: 10px; padding: 0; margin-bottom: 30px; }
-  .stores-card-title { width: 70%; }
-  .stores-card-buttons { flex-wrap: nowrap; gap: 10px; margin-top: 0; }
-  .stores-card-btn,
-  .stores-card-btn.btn-page-accent { flex: 1 1 50%; max-width: 50%; font-size: 16px; }
-  .stores-card-map { flex: none; margin-bottom: -10px; }
-  .stores-card-map iframe { height: 320px; }
+  .stores-grid { grid-template-columns: 1fr; gap: 20px; padding: 40px 0; }
+  .stores-item { padding: 25px 20px; }
+  .stores-card-btn { font-size: 16px; }
   .stores-soon { margin: 40px 0; }
   .stores-soon .stores-row { flex-direction: column; gap: 20px; }
   .stores-soon-art,
@@ -314,10 +299,10 @@
   /* Franchise */
   .franchise-hero-text { font-size: 24px; line-height: 1.2; }
   .page-hero-copy > .franchise-hero-text { margin-top: 10px; }
-  .franchise-intro .split-row,
-  .franchise-intro .split-col { gap: 20px; }
-  .franchise-intro .split-block + .split-block { margin-top: 0; }
-  .franchise-half-title { width: 90%; }
+  .franchise-hero-title { font-size: 30px; }
+  .franchise-intro,
+  .franchise-together,
+  .franchise-closing { padding: 60px 0; }
   .franchise-section-title { font-size: 36px; }
   .franchise-section-subtitle span { font-size: 21px; }
   .franchise-grid { grid-template-columns: 1fr; }
@@ -347,69 +332,15 @@
   .contact-field-half { width: 100%; }
   .contact-taste-art { max-width: 80%; }
 
-  /* Menu – hero + sauce carousel */
-  .menu-hero-title { min-height: 250px; }
-  .menu-hero-title img { margin: 60px 0; }
-  .menu-flip-sauce { height: 180px; }
-  .menu-flip-sauce .menu-flip-front,
-  .menu-flip-sauce .menu-flip-back { padding: 20px; }
-
-  /* Menu – bands */
-  .menu-band { padding: 30px 0; }
-  .menu-band-title { text-align: left; }
-  .menu-band-accent { padding: 10px 0; }
-  .menu-band-title-lg { font-size: 38px; margin: 0; }
-
-  /* Menu – titles */
-  .menu-section-title { font-size: 36px; text-align: left; }
-  .menu-item-title { font-size: 20px; }
-
-  /* Menu – flip text */
-  .menu-flip .menu-flip-text { font-size: 13px; line-height: 1.2; }
-  .menu-flip-sauce .menu-flip-text { font-size: 17px; line-height: 23px; }
-
-  /* Menu – burgers, wraps & pitas */
-  .menu-mains-grid { gap: 20px 5px; }
-  .menu-flip-main { height: 200px; }
-
-  /* Menu – signature collection */
-  .menu-signature { padding: 30px 0; }
-  .menu-signature-grid { gap: 0 5px; margin-top: 20px; }
-  .menu-signature-item { padding-top: 25px; }
-  .menu-flip-signature { height: 150px; }
-
-  /* Menu – strips, wings & trays */
-  .menu-strips { padding-top: 10px; }
-  .menu-strips-grid { gap: 15px 5px; }
-  .menu-trays { padding-top: 0; }
-  .menu-trays-grid { gap: 0 5px; }
-  .menu-flip-tray { height: 200px; }
-
-  /* Menu – loaded fries */
-  .menu-loaded { min-height: 120px; }
-  .menu-loaded::before { background-size: 858px auto; }
-  .menu-loaded-grid { gap: 0; }
-  .menu-loaded-item { padding-top: 25px; }
-  .menu-flip-loaded { height: 135px; }
-  .menu-fries { margin: 20px 0; }
-  .menu-fries-grid { gap: 10px 5px; }
-
-  /* Menu – sides */
-  .menu-sides { padding: 30px 0; }
-  .menu-sides-grid { gap: 10px; }
-
-  /* Menu – desserts, drinks & buttons */
-  .menu-desserts-row { flex-direction: column; gap: 15px; }
-  .menu-desserts-left,
-  .menu-desserts-right { width: 100%; }
-  .menu-drinks { padding-bottom: 30px; }
-  .menu-drinks-grid { gap: 3px; }
-  .menu-cta { padding: 20px 0; }
-  .menu-cta-buttons { flex-direction: column; align-items: stretch; }
-  .menu-cta-buttons .btn-page { width: 100%; }
 }
 
 @media (max-width: 575px) {
+  /* Menu – one card per row so the descriptions fit */
+  .menu-mains-grid,
+  .menu-signature-grid { grid-template-columns: 1fr; }
+  .menu-flip .menu-flip-text { font-size: 18px; line-height: 1.3; }
+  .menu-flip-back { padding: 30px; }
+
   /* Flavours */
   .drip-copy { font-size: 20px; letter-spacing: 0.5px; }
   .hero .carousel-item img {height: 200px;object-fit: cover;}

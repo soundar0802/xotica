@@ -60,41 +60,32 @@
   text-align: right;
 }
 
-/* Store card – details + map */
-.stores-card {
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid #E3E3E3;
+/* Store list – 2 columns of cards */
+.stores-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }
-.stores-card-info {
-  flex: 0 1 45%;
-  min-width: 0;
+.stores-item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  padding: 0 40px;
+  gap: 15px;
+  padding: 35px 40px;
+  border: 1px solid #E3E3E3;
+  border-top: 6px solid var(--primary);
 }
-.stores-card-title { width: 70%; }
+.stores-item-title { margin: 0; }
+.stores-item-text p { margin: 0 0 6px; }
+.stores-item-text i { color: var(--primary); margin-right: 8px; }
 .stores-card-buttons {
   display: flex;
   gap: 15px;
-  margin-top: 10px;
+  margin-top: auto;
+  padding-top: 10px;
 }
 .stores-card-btn {
-  flex: 0 1 50%;
+  flex: 1 1 50%;
   font-size: 20px;
-}
-.stores-card-btn.btn-page-accent { flex: 1 0 auto; max-width: 50%; }
-.stores-card-map {
-  flex: 0 1 60%;
-  min-width: 0;
-}
-.stores-card-map iframe {
-  display: block;
-  width: 100%;
-  height: 388px;
-  border: 0;
 }
 
 /* Shared two-column rows (coming soon / franchise) */
