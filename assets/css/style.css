@@ -413,6 +413,61 @@ a:focus-visible, button:focus-visible, .sauce-tile:focus-visible {
 }
 
 /* =========================================================
+   PAGE LOADER – logo over a white screen until the page has loaded
+   ========================================================= */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  background: var(--white);
+  transition: opacity .45s ease, visibility .45s ease;
+  /* Failsafe – hides itself even if main.js never runs */
+  animation: loaderFailsafe 0s 8s forwards;
+}
+.page-loader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.page-loader-logo {
+  width: 170px;
+  height: auto;
+  animation: loaderPulse 1.2s ease-in-out infinite;
+}
+/* Red bar with a yellow stripe sweeping across it */
+.page-loader-bar {
+  position: relative;
+  width: 140px;
+  height: 5px;
+  overflow: hidden;
+  background: var(--primary);
+}
+.page-loader-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -40%;
+  width: 40%;
+  background: var(--secondary);
+  animation: loaderSweep 1s ease-in-out infinite;
+}
+@keyframes loaderPulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.06); }
+}
+@keyframes loaderSweep {
+  to { left: 100%; }
+}
+@keyframes loaderFailsafe {
+  to { opacity: 0; visibility: hidden; }
+}
+
+/* =========================================================
    Reduced motion
    ========================================================= */
 @media (prefers-reduced-motion: reduce) {
@@ -422,4 +477,5 @@ a:focus-visible, button:focus-visible, .sauce-tile:focus-visible {
   [data-animate] { visibility: visible; }
   .animated { animation: none !important; }
   .food-pattern-layer, .parallax-layer { transform: none !important; transition: none; }
+  .page-loader-logo, .page-loader-bar::after { animation: none; }
 }

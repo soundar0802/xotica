@@ -53,7 +53,6 @@
   .rewards-text { font-size: 21px; max-width: 345px; }
   .mild-wild { padding: 77px 0 88px; }
   .franchise-benefit-body p {font-size: 14px;}
-  .stores-card-btn {font-size: 17px;}
 
   /* Footer */
   .footer-main { padding: 55px 0; }
@@ -128,7 +127,6 @@
   .dish { grid-template-columns: 1fr; gap: 40px; }
   .dish:nth-child(even) .dish-media { order: 0; }
   .dish-media { max-width: 560px; }
-  .dish:nth-child(even) .dish-media img { box-shadow: 14px 14px 0 var(--secondary); }
   .dish-num { font-size: 60px; }
   .sauce-cards { grid-template-columns: repeat(2, 1fr); }
 
@@ -137,8 +135,11 @@
   .stores-find-intro { flex: 1 1 100%; gap: 15px; }
   .stores-find-title { width: 400px; max-width: 400px; font-size: 30px; }
   .stores-find-tagline { width: 180px; max-width: 180px; }
-  .stores-item { padding: 30px; }
-  .stores-card-btn { font-size: 18px; }
+  .finder { grid-template-columns: 1fr; min-height: 0; }
+  .finder-panel { border-right: 0; border-bottom: 3px solid var(--primary); }
+  .finder-list { max-height: 380px; }
+  .finder-map { height: 500px; }
+  .finder-detail { left: 12px; right: 12px; width: auto; }
   .stores-soon { margin-top: 40px; }
   .stores-soon .stores-row { gap: 0; }
   .stores-soon-art { flex: 0 0 50%; text-align: left; }
@@ -267,8 +268,7 @@
   .dish { gap: 28px; }
   .dish-title { font-size: 30px; }
   .dish-tagline { font-size: 18px; }
-  .dish-media img,
-  .dish:nth-child(even) .dish-media img { box-shadow: 10px 10px 0 var(--secondary); }
+  .dish-media img { border-radius: 16px; }
   .sauce-cards { gap: 16px; }
   .sauce-card-body { padding: 14px; }
   .sauce-card-body h3 { font-size: 16px; }
@@ -281,9 +281,8 @@
     border-bottom: 15px solid var(--secondary);
   }
   .stores-find-head { display: none; }
-  .stores-grid { grid-template-columns: 1fr; gap: 20px; padding: 40px 0; }
-  .stores-item { padding: 25px 20px; }
-  .stores-card-btn { font-size: 16px; }
+  .finder { margin: 40px 0; }
+  .finder-map { height: 430px; }
   .stores-soon { margin: 40px 0; }
   .stores-soon .stores-row { flex-direction: column; gap: 20px; }
   .stores-soon-art,
@@ -348,4 +347,48 @@
   /* Footer – stack text above icons on phones */
   .footer-connect-row { flex-direction: column; align-items: flex-start; }
   .socials { margin-left: 0; }
+  .franchise-section-title {font-size: 24px;}
+
+  /* Tighter section spacing on phones */
+  .flavours-intro { padding: 28px 0 32px; }
+  .flavours-title { margin-bottom: 24px; }
+  .rewards { padding: 22px 0; }
+  .mild-wild { padding: 32px 0 36px; }
+  .footer-main { padding: 28px 0; }
+
+  .page-split { margin: 28px 0; }
+  .page-hero-content { margin-top: 18px; }
+
+  .food-hero { padding: 28px 0 50px; }
+  .food-section,
+  .food-sauces { padding: 38px 0; }
+  .food-section-head { margin-bottom: 26px; }
+  .food-dishes { gap: 40px; }
+  .dish { gap: 20px; }
+  .food-pattern { padding: 44px 0; }
+
+  .stores-find { margin: 14px 0 28px; }
+  .finder { margin: 28px 0; }
+  .finder-top { padding: 14px; }
+  .finder-card { padding: 14px 16px; }
+  .stores-soon,
+  .stores-franchise { margin: 28px 0; }
+
+  .franchise-intro,
+  .franchise-together,
+  .franchise-closing,
+  .franchise-benefits,
+  .franchise-enquiry { padding: 40px 0; }
+  .franchise-grid { margin-top: 10px; gap: 20px; }
+  .franchise-form { margin-top: 24px; }
+  .franchise-benefit {gap: 0px;}
+  .contact-main { margin: 28px 0; }
+  .contact-taste { padding: 44px 0; }
+
+  .menu-hero-heading { margin: 40px 0; }
+  .menu-band { padding: 20px 0; }
+  .menu-mains { margin: 28px 0 36px; }
+  .menu-signature { padding: 28px 0; }
+  .menu-signature-grid { margin-top: 18px; }
+  .menu-cta { padding: 16px 0; }
 }

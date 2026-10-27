@@ -25,4 +25,7 @@
   padding: 2px 8px;
 }
 .navbar-toggler:focus { box-shadow: 0 0 0 3px rgba(246, 169, 48, .4); }
+.navbar-toggler .icon-close { display: none; }
+.navbar-toggler[aria-expanded="true"] .icon-open { display: none; }
+.navbar-toggler[aria-expanded="true"] .icon-close { display: inline-block; }
 .navbar .nav-item .btn-brand { margin-left: 16px; }

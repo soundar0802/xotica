@@ -15,10 +15,16 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/header.css" rel="stylesheet">
   <link href="assets/css/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
   <link href="assets/css/our-stores.css" rel="stylesheet">
   <link href="assets/css/responsive.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Page loader – fades out once the page has loaded (main.js) -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <img src="assets/images/logo/website-logo.png" alt="" class="page-loader-logo">
+    <span class="page-loader-bar"></span>
+  </div>
 <div class="page-wrapper">
 
   <!-- ================= HEADER ================= -->
@@ -65,151 +71,42 @@
           </div>
         </div>
 
-        <!-- Placeholder stores – replace the name, address, hours, phone and links for each of the 10 stores -->
-        <div class="stores-grid">
-          <div class="stores-item" data-animate="slideInUp" data-animate-tablet="none">
-            <h2 class="page-title stores-item-title">Store Name 01</h2>
-            <div class="page-text stores-item-text">
-              <p><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Street address, Town, Postcode</p>
-              <p><i class="bi bi-clock-fill" aria-hidden="true"></i> Mon – Sun : 11:00AM – Midnight</p>
-              <p><i class="bi bi-telephone-fill" aria-hidden="true"></i> 01234 567890</p>
+        <!-- Store finder – the store list, map pins and details all come from STORES in assets/js/stores.js -->
+        <div class="finder" data-animate="fadeIn">
+          <div class="finder-panel">
+            <div class="finder-top">
+              <form class="finder-search" id="storeSearch" role="search">
+                <label for="storeQuery" class="visually-hidden">Search stores</label>
+                <input id="storeQuery" type="search" placeholder="Town, postcode or street" autocomplete="off">
+                <button class="finder-search-btn" type="submit" aria-label="Search stores"><i class="bi bi-search" aria-hidden="true"></i></button>
+              </form>
+              <div class="finder-meta">
+                <span class="finder-count" id="storeCount"></span>
+                <button class="finder-link" id="storeNear" type="button">Sort by nearest</button>
+              </div>
             </div>
-            <div class="stores-card-buttons">
-              <a href="#" class="btn-page btn-page-primary stores-card-btn">Directions</a>
-              <a href="#" class="btn-page btn-page-accent stores-card-btn">Order Online</a>
-            </div>
+            <div class="finder-list" id="storeList"></div>
           </div>
-          <div class="stores-item" data-animate="slideInUp" data-animate-tablet="none" data-animate-delay="150">
-            <h2 class="page-title stores-item-title">Store Name 02</h2>
-            <div class="page-text stores-item-text">
-              <p><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Street address, Town, Postcode</p>
-              <p><i class="bi bi-clock-fill" aria-hidden="true"></i> Mon – Sun : 11:00AM – Midnight</p>
-              <p><i class="bi bi-telephone-fill" aria-hidden="true"></i> 01234 567890</p>
-            </div>
-            <div class="stores-card-buttons">
-              <a href="#" class="btn-page btn-page-primary stores-card-btn">Directions</a>
-              <a href="#" class="btn-page btn-page-accent stores-card-btn">Order Online</a>
-            </div>
-          </div>
-          <div class="stores-item" data-animate="slideInUp" data-animate-tablet="none">
-            <h2 class="page-title stores-item-title">Store Name 03</h2>
-            <div class="page-text stores-item-text">
-              <p><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Street address, Town, Postcode</p>
-              <p><i class="bi bi-clock-fill" aria-hidden="true"></i> Mon – Sun : 11:00AM – Midnight</p>
-              <p><i class="bi bi-telephone-fill" aria-hidden="true"></i> 01234 567890</p>
-            </div>
-            <div class="stores-card-buttons">
-              <a href="#" class="btn-page btn-page-primary stores-card-btn">Directions</a>
-              <a href="#" class="btn-page btn-page-accent stores-card-btn">Order Online</a>
-            </div>
-          </div>
-          <div class="stores-item" data-animate="slideInUp" data-animate-tablet="none" data-animate-delay="150">
-            <h2 class="page-title stores-item-title">Store Name 04</h2>
-            <div class="page-text stores-item-text">
-              <p><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Street address, Town, Postcode</p>
-              <p><i class="bi bi-clock-fill" aria-hidden="true"></i> Mon – Sun : 11:00AM – Midnight</p>
-              <p><i class="bi bi-telephone-fill" aria-hidden="true"></i> 01234 567890</p>
-            </div>
-            <div class="stores-card-buttons">
-              <a href="#" class="btn-page btn-page-primary stores-card-btn">Directions</a>
-              <a href="#" class="btn-page btn-page-accent stores-card-btn">Order Online</a>
-            </div>
-          </div>
-          <div class="stores-item" data-animate="slideInUp" data-animate-tablet="none">
-            <h2 class="page-title stores-item-title">Store Name 05</h2>
-            <div class="page-text stores-item-text">
-              <p><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Street address, Town, Postcode</p>
-              <p><i class="bi bi-clock-fill" aria-hidden="true"></i> Mon – Sun : 11:00AM – Midnight</p>
-              <p><i class="bi bi-telephone-fill" aria-hidden="true"></i> 01234 567890</p>
-            </div>
-            <div class="stores-card-buttons">
-              <a href="#" class="btn-page btn-page-primary stores-card-btn">Directions</a>
-              <a href="#" class="btn-page btn-page-accent stores-card-btn">Order Online</a>
-            </div>
-          </div>
-          <div class="stores-item" data-animate="slideInUp" data-animate-tablet="none" data-animate-delay="150">
-            <h2 class="page-title stores-item-title">Store Name 06</h2>
-            <div class="page-text stores-item-text">
-              <p><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Street address, Town, Postcode</p>
-              <p><i class="bi bi-clock-fill" aria-hidden="true"></i> Mon – Sun : 11:00AM – Midnight</p>
-              <p><i class="bi bi-telephone-fill" aria-hidden="true"></i> 01234 567890</p>
-            </div>
-            <div class="stores-card-buttons">
-              <a href="#" class="btn-page btn-page-primary stores-card-btn">Directions</a>
-              <a href="#" class="btn-page btn-page-accent stores-card-btn">Order Online</a>
-            </div>
-          </div>
-          <div class="stores-item" data-animate="slideInUp" data-animate-tablet="none">
-            <h2 class="page-title stores-item-title">Store Name 07</h2>
-            <div class="page-text stores-item-text">
-              <p><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Street address, Town, Postcode</p>
-              <p><i class="bi bi-clock-fill" aria-hidden="true"></i> Mon – Sun : 11:00AM – Midnight</p>
-              <p><i class="bi bi-telephone-fill" aria-hidden="true"></i> 01234 567890</p>
-            </div>
-            <div class="stores-card-buttons">
-              <a href="#" class="btn-page btn-page-primary stores-card-btn">Directions</a>
-              <a href="#" class="btn-page btn-page-accent stores-card-btn">Order Online</a>
-            </div>
-          </div>
-          <div class="stores-item" data-animate="slideInUp" data-animate-tablet="none" data-animate-delay="150">
-            <h2 class="page-title stores-item-title">Store Name 08</h2>
-            <div class="page-text stores-item-text">
-              <p><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Street address, Town, Postcode</p>
-              <p><i class="bi bi-clock-fill" aria-hidden="true"></i> Mon – Sun : 11:00AM – Midnight</p>
-              <p><i class="bi bi-telephone-fill" aria-hidden="true"></i> 01234 567890</p>
-            </div>
-            <div class="stores-card-buttons">
-              <a href="#" class="btn-page btn-page-primary stores-card-btn">Directions</a>
-              <a href="#" class="btn-page btn-page-accent stores-card-btn">Order Online</a>
-            </div>
-          </div>
-          <div class="stores-item" data-animate="slideInUp" data-animate-tablet="none">
-            <h2 class="page-title stores-item-title">Store Name 09</h2>
-            <div class="page-text stores-item-text">
-              <p><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Street address, Town, Postcode</p>
-              <p><i class="bi bi-clock-fill" aria-hidden="true"></i> Mon – Sun : 11:00AM – Midnight</p>
-              <p><i class="bi bi-telephone-fill" aria-hidden="true"></i> 01234 567890</p>
-            </div>
-            <div class="stores-card-buttons">
-              <a href="#" class="btn-page btn-page-primary stores-card-btn">Directions</a>
-              <a href="#" class="btn-page btn-page-accent stores-card-btn">Order Online</a>
-            </div>
-          </div>
-          <div class="stores-item" data-animate="slideInUp" data-animate-tablet="none" data-animate-delay="150">
-            <h2 class="page-title stores-item-title">Store Name 10</h2>
-            <div class="page-text stores-item-text">
-              <p><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Street address, Town, Postcode</p>
-              <p><i class="bi bi-clock-fill" aria-hidden="true"></i> Mon – Sun : 11:00AM – Midnight</p>
-              <p><i class="bi bi-telephone-fill" aria-hidden="true"></i> 01234 567890</p>
-            </div>
-            <div class="stores-card-buttons">
-              <a href="#" class="btn-page btn-page-primary stores-card-btn">Directions</a>
-              <a href="#" class="btn-page btn-page-accent stores-card-btn">Order Online</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ================= SECTION 3: COMING SOON ================= -->
-    <section class="stores-soon">
-      <div class="container">
-        <div class="stores-row">
-          <div class="stores-soon-art">
-            <img src="assets/images/our-stores/new-stores-coming-soon.svg" alt="Xotica - New Stores Coming Soon" data-animate="fadeIn">
-          </div>
-          <div class="stores-soon-content">
-            <div class="stores-soon-block">
-              <h2 class="page-title stores-soon-title" data-animate="slideInUp">PRESTON<br>MANCHESTER<br>AND MORE..</h2>
-              <div class="page-text" data-animate="slideInUp">
-                <p>We’re growing drip by drip. Exciting new locations are on the way – bringing you closer to the products and experiences you love. <em><strong>Stay tuned for opening dates and special launch events near you!</strong></em></p>
+          <div class="finder-map">
+            <div id="storeMap"></div>
+            <span class="finder-note" id="storeNote">Tap a pin for details</span>
+            <div class="finder-detail" id="storeDetail" role="dialog" aria-live="polite" aria-label="Store details">
+              <button class="finder-detail-close" id="storeDetailClose" type="button" aria-label="Close details"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+              <h3 class="finder-detail-name" id="dName"></h3>
+              <p class="finder-detail-line"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> <span id="dAddr"></span></p>
+              <p class="finder-detail-line"><i class="bi bi-clock-fill" aria-hidden="true"></i> <span id="dHours"></span></p>
+              <p class="finder-detail-line"><i class="bi bi-telephone-fill" aria-hidden="true"></i> <a id="dPhone" href="#"></a></p>
+              <div class="finder-detail-buttons">
+                <a class="btn-page btn-page-primary finder-btn" id="dDir" href="#" target="_blank" rel="noopener">Directions</a>
+                <a class="btn-page btn-page-accent finder-btn" id="dOrder" href="#">Order Online</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
+  
     <!-- ================= SECTION 4: FRANCHISE ================= -->
     <section class="stores-franchise">
       <div class="container">
@@ -242,5 +139,7 @@
 
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+  <script src="assets/js/stores.js"></script>
 </body>
 </html>

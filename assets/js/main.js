@@ -4,6 +4,20 @@ const MAIN_SITE_URL = "";
 // brand/ can still load the shared header and footer
 const SITE_ROOT = new URL("../../", document.currentScript.src);
 
+// Resolves once the whole page (images included) has finished loading
+const pageLoaded = new Promise((resolve) => {
+  if (document.readyState === "complete") resolve();
+  else window.addEventListener("load", resolve, { once: true });
+});
+
+// Fade out the page loader once the page has loaded – never wait more than 4s
+function hideLoader() {
+  const loader = document.getElementById("pageLoader");
+  if (!loader) return Promise.resolve();
+  const maxWait = new Promise((resolve) => setTimeout(resolve, 4000));
+  return Promise.race([pageLoaded, maxWait]).then(() => loader.classList.add("is-hidden"));
+}
+
 // Load a partial HTML file into the element with the given id
 async function loadPartial(id, url) {
   const placeholder = document.getElementById(id);
@@ -212,7 +226,6 @@ function initFaqAccordion() {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  initScrollAnimations();
   initParallax();
   initSauceCarousel();
   initFaqAccordion();
@@ -259,4 +272,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Footer year (set after the footer partial is loaded)
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
+
+  // Start the entrance animations once the loader has gone, so they're seen
+  await hideLoader();
+  initScrollAnimations();
 });

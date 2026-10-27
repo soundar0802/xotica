@@ -60,33 +60,259 @@
   text-align: right;
 }
 
-/* Store list – 2 columns of cards */
-.stores-grid {
+/* Store finder – searchable list on the left, map on the right */
+.finder {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  grid-template-columns: 4fr 8fr;
+  min-height: 640px;
+  border: 3px solid var(--primary);
+  background: var(--white);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, .15);
 }
-.stores-item {
+.finder-panel {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding: 35px 40px;
-  border: 1px solid #E3E3E3;
-  border-top: 6px solid var(--primary);
+  min-width: 0;
+  background: #fff9f0;
+  border-right: 3px solid var(--primary);
 }
-.stores-item-title { margin: 0; }
-.stores-item-text p { margin: 0 0 6px; }
-.stores-item-text i { color: var(--primary); margin-right: 8px; }
-.stores-card-buttons {
+.finder-top {
+  padding: 20px;
+  background: var(--white);
+  border-bottom: 3px solid var(--primary);
+}
+.finder-search {
   display: flex;
-  gap: 15px;
-  margin-top: auto;
-  padding-top: 10px;
+  border: 2px solid var(--black);
 }
-.stores-card-btn {
-  flex: 1 1 50%;
+.finder-search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  padding: 12px 14px;
+  font-family: var(--font);
+  font-size: 16px;
+}
+.finder-search input:focus { outline: 0; }
+.finder-search:focus-within { box-shadow: 0 0 0 3px rgba(246, 169, 48, .5); }
+.finder-search-btn {
+  width: 52px;
+  border: 0;
+  background: var(--primary);
+  color: var(--white);
+  font-size: 18px;
+}
+.finder-search-btn:hover { background: var(--black); }
+.finder-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+.finder-count,
+.finder-link {
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.finder-count { color: #6b6b6b; }
+.finder-link {
+  padding: 0;
+  border: 0;
+  border-bottom: 2px solid currentColor;
+  background: none;
+  color: var(--primary);
+}
+.finder-link:hover { color: var(--black); }
+
+.finder-list {
+  flex: 1;
+  max-height: 560px;
+  overflow-y: auto;
+}
+.finder-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 18px 20px;
+  border: 0;
+  border-bottom: 1px solid #ecdcc4;
+  background: transparent;
+  text-align: left;
+  font-family: var(--font);
+}
+.finder-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  background: var(--primary);
+  transition: width .15s ease;
+}
+.finder-card:hover,
+.finder-card.is-on { background: var(--white); }
+.finder-card.is-on::before { width: 6px; }
+.finder-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+.finder-card-name {
+  margin: 0;
   font-size: 20px;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: var(--primary);
 }
+.finder-card-dist {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--secondary);
+  white-space: nowrap;
+}
+.finder-card-addr {
+  display: block;
+  margin: 6px 0 8px;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #444;
+}
+.finder-card-phone {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--black);
+}
+.finder-empty { padding: 30px 20px; color: #555; }
+.finder-empty b {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 22px;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+.finder-empty .btn-page { font-size: 16px; }
+
+.finder-map {
+  position: relative;
+  min-height: 430px;
+}
+#storeMap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #eee6da;
+  font-family: var(--font);
+}
+.finder-note {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  z-index: 500;
+  padding: 6px 12px;
+  background: var(--primary);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.finder-pin {
+  position: relative;
+  width: 54px;
+  height: 60px;
+  transform-origin: 50% 100%;
+  transition: transform .16s ease;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .35));
+}
+/* Red drop: a square with three rounded corners, turned so the point faces down */
+.finder-pin::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 54px;
+  height: 54px;
+  background: var(--primary);
+  border: 2px solid var(--white);
+  border-radius: 50% 50% 50% 0;
+  transform: translate(0, 1px) rotate(-45deg) scale(.82);
+  transform-origin: 50% 50%;
+}
+.finder-pin-logo {
+  position: absolute;
+  top: 10px;
+  left: 9px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--white);
+}
+/* Leaflet sets marker images to width: auto, so this needs the extra class */
+.finder-pin .finder-pin-logo img { width: 30px; height: auto; }
+.finder-pin:hover { transform: translateY(-4px) scale(1.06); }
+.finder-pin.is-on { transform: translateY(-5px) scale(1.2); }
+
+.finder-detail {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 600;
+  display: none;
+  width: 340px;
+  padding: 20px;
+  background: var(--white);
+  border-top: 6px solid var(--primary);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .3);
+}
+.finder-detail.is-open { display: block; animation: finderSnap .18s ease-out both; }
+@keyframes finderSnap { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .finder-detail.is-open { animation: none; }
+  .finder-pin, .finder-card::before { transition: none; }
+}
+.finder-detail-name {
+  margin: 0 30px 12px 0;
+  font-family: var(--font);
+  font-size: 24px;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: var(--primary);
+}
+.finder-detail-line { margin: 0 0 6px; font-size: 15px; }
+.finder-detail-line i { color: var(--primary); margin-right: 6px; }
+.finder-detail-line a { color: var(--black); font-weight: 700; text-decoration: none; }
+.finder-detail-line a:hover { color: var(--primary); }
+.finder-detail-buttons { display: flex; gap: 10px; margin-top: 16px; }
+.finder-btn { flex: 1 1 50%; padding: 10px 12px; font-size: 16px; text-align: center; white-space: nowrap; }
+.finder-detail-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  background: var(--black);
+  color: var(--white);
+  font-size: 14px;
+}
+.finder-detail-close:hover { background: var(--primary); }
 
 /* Shared two-column rows (coming soon / franchise) */
 .stores-row {
