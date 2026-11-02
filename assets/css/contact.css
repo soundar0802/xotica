@@ -29,7 +29,7 @@
 .contact-col-faq { flex: 2 1 0; min-width: 0; }
 
 .contact-title {
-  font-family: var(--font);
+  font-family: var(--font-heading);
   font-size: 46px;
   font-weight: 800;
   font-style: italic;

@@ -30,7 +30,7 @@
 
 /* Shared section headings */
 .franchise-section-title {
-  font-family: var(--font);
+  font-family: var(--font-heading);
   font-size: 46px;
   font-weight: 800;
   font-style: italic;
@@ -82,7 +82,7 @@
   color: var(--secondary);
 }
 .franchise-benefit-body h3 {
-  font-family: var(--font);
+  font-family: var(--font-heading);
   font-size: 20px;
   font-weight: 500;
   font-style: italic;
@@ -163,7 +163,7 @@
   gap: 60px 80px;
 }
 .franchise-pillar-title {
-  font-family: var(--font);
+  font-family: var(--font-heading);
   font-size: 40px;
   font-weight: 800;
   font-style: italic;
@@ -197,7 +197,7 @@
   color: var(--white);
 }
 .franchise-eco-title {
-  font-family: var(--font);
+  font-family: var(--font-heading);
   font-size: 32px;
   font-weight: 800;
   font-style: italic;

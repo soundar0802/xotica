@@ -452,4 +452,7 @@
   .menu-signature { padding: 28px 0; }
   .menu-signature-grid { margin-top: 18px; }
   .menu-cta { padding: 16px 0; }
+
+  .express-soon { padding: 56px 0; min-height: 70vh; }
+  .express-soon-heading { letter-spacing: -1px; }
 }

@@ -7,7 +7,7 @@
 .menu-section-title,
 .menu-item-title,
 .menu-flip-title {
-  font-family: var(--font);
+  font-family: var(--font-heading);
   font-weight: 800;
   font-style: italic;
   text-transform: uppercase;
@@ -133,7 +133,7 @@
 /* Hero heading – tilted heavy italic, set in type so the wording can change */
 .menu-hero-heading {
   margin: 100px 0;
-  font-family: var(--font);
+  font-family: var(--font-heading);
   font-size: 118px;
   font-weight: 900;
   font-style: italic;

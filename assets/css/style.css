@@ -7,7 +7,8 @@
   --secondary: #f6a930;
   --black: #000;
   --white: #fff;
-  --font: "futura-pt", "Jost", sans-serif;
+  --font: "Chivo", sans-serif;
+  --font-heading: "Chivo", sans-serif;
   --header-h: 92px;
 }
 
@@ -17,6 +18,10 @@ body {
   font-family: var(--font);
   color: var(--black);
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
 }
 
 /* Heavy oblique uppercase – the site's signature type style */
@@ -33,6 +38,12 @@ body {
   font-weight: 800;
   font-style: italic;
   text-transform: uppercase;
+}
+
+.flavours-title,
+.footer-title,
+.sauce-info h4 {
+  font-family: var(--font-heading);
 }
 
 /* ---------- Buttons ---------- */
@@ -330,7 +341,7 @@ a:focus-visible, button:focus-visible, .sauce-tile:focus-visible {
   flex-direction: column;
   align-items: center;
   margin: 0;
-  font-family: var(--font);
+  font-family: var(--font-heading);
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
@@ -415,7 +426,7 @@ a:focus-visible, button:focus-visible, .sauce-tile:focus-visible {
    INNER PAGES – shared components (About Us, Our Food)
    ========================================================= */
 .page-title {
-  font-family: var(--font);
+  font-family: var(--font-heading);
   font-size: 32px;
   font-weight: 800;
   font-style: italic;
@@ -446,7 +457,7 @@ a:focus-visible, button:focus-visible, .sauce-tile:focus-visible {
   height: auto;
 }
 .page-hero-title {
-  font-family: var(--font);
+  font-family: var(--font-heading);
   font-size: 36px;
   font-weight: 800;
   font-style: italic;

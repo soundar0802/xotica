@@ -28,7 +28,7 @@
   background: var(--secondary);
 }
 .food-hero-title {
-  font-family: var(--font);
+  font-family: var(--font-heading);
   font-size: 64px;
   font-weight: 900;
   font-style: italic;
@@ -65,7 +65,7 @@
   text-align: center;
 }
 .food-section-title {
-  font-family: var(--font);
+  font-family: var(--font-heading);
   font-size: 46px;
   font-weight: 800;
   font-style: italic;
@@ -117,7 +117,7 @@
   margin-bottom: 8px;
 }
 .dish-title {
-  font-family: var(--font);
+  font-family: var(--font-heading);
   font-size: 38px;
   font-weight: 800;
   font-style: italic;
@@ -175,7 +175,7 @@
   padding: 20px;
 }
 .sauce-card-body h3 {
-  font-family: var(--font);
+  font-family: var(--font-heading);
   font-size: 20px;
   font-weight: 800;
   font-style: italic;
