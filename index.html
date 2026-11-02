@@ -32,12 +32,23 @@
 
     <!-- ================= SECTION 1: HERO CAROUSEL ================= -->
     <section class="hero" data-animate="fadeIn">
-      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="false">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="assets/images/homepage/carousel-2.jpg" class="d-block w-100" alt="Perfect Combo for bigger cravings">
           </div>
+          <div class="carousel-item" data-arrows="light">
+            <img src="assets/images/homepage/carousel-1.jpg" class="d-block w-100" alt="Limited edition Loaded Kebab Box in your favourite BadBoy flavours">
+          </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <i class="bi bi-chevron-left" aria-hidden="true"></i>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <i class="bi bi-chevron-right" aria-hidden="true"></i>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </section>
 
@@ -192,23 +203,55 @@
     <section class="rewards">
       <div class="container">
         <div class="row align-items-center justify-content-between g-4 text-center text-lg-start">
-          <div class="col-lg-6">
+          <div class="col-lg-5">
             <p class="rewards-text">Choose your flavour and enjoy delicious Kebab every time!</p>
           </div>
-          <div class="col-sm-6 col-lg-3">
+          <div class="col-sm-5 col-lg-3">
             <img src="assets/images/homepage/collect-rewards.svg" alt="Collect rewards" class="rewards-badge">
           </div>
-          <div class="col-sm-6 col-lg-3 text-lg-end">
-            <a href="#" class="btn btn-white">Order via app</a>
+          <!-- App download badges – add the store links once the app is live -->
+          <div class="col-sm-7 col-lg-4">
+            <div class="store-badges">
+              <a href="#" class="store-badge">
+                <img src="assets/images/homepage/app-store-badge.png" alt="Download on the App Store" width="701" height="213">
+              </a>
+              <a href="#" class="store-badge">
+                <img src="assets/images/homepage/google-play-badge.png" alt="Get it on Google Play" width="702" height="213">
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="mild-wild" data-parallax-speed="4">
-      <div class="parallax-layer mild-wild-layer" aria-hidden="true"></div>
+    <!-- ================= SECTION 5: CLASSIC TO EXTREME ================= -->
+    <section class="flavour-blast" aria-labelledby="flavourBlastTitle">
       <div class="container text-center">
-        <img src="assets/images/homepage/from-mild-to-wild.png" alt="From mild to wild – find your perfect flavour" class="mild-wild-art">
+        <!-- Dishes sit over the headline; an outline copy on top keeps the letters visible through the food -->
+        <div class="blast-banner" data-animate="slideInUp">
+          <h2 class="blast-title" id="flavourBlastTitle">
+              <span class="blast-row"><span class="blast-word blast-sm">From</span></span>
+              <span class="blast-row"><span class="blast-word blast-xl">Classic</span><span class="blast-word blast-sm">to</span></span>
+              <span class="blast-row"><span class="blast-word blast-xxl blast-red">Extreme</span></span>
+              <span class="blast-row"><span class="blast-word blast-sm blast-stack">Try<br>our</span><span class="blast-word blast-xl">Signature</span></span>
+              <span class="blast-row"><span class="blast-word blast-xl">Flavours</span></span>
+          </h2>
+          <img src="assets/images/homepage/flavours/loaded-chips-drizzle.webp" alt="" class="blast-tray blast-tray-1" loading="lazy">
+          <img src="assets/images/homepage/flavours/shashlik-on-naan.webp" alt="" class="blast-tray blast-tray-2" loading="lazy">
+          <img src="assets/images/homepage/flavours/chicken-onion-rings.webp" alt="" class="blast-tray blast-tray-3" loading="lazy">
+          <img src="assets/images/homepage/flavours/tikka-chips-rice.webp" alt="" class="blast-tray blast-tray-4" loading="lazy">
+          <div class="blast-title blast-title-outline" aria-hidden="true">
+              <span class="blast-row"><span class="blast-word blast-sm">From</span></span>
+              <span class="blast-row"><span class="blast-word blast-xl">Classic</span><span class="blast-word blast-sm">to</span></span>
+              <span class="blast-row"><span class="blast-word blast-xxl blast-red">Extreme</span></span>
+              <span class="blast-row"><span class="blast-word blast-sm blast-stack">Try<br>our</span><span class="blast-word blast-xl">Signature</span></span>
+              <span class="blast-row"><span class="blast-word blast-xl">Flavours</span></span>
+          </div>
+          <div class="blast-buttons" data-animate="slideInUp" data-animate-delay="200">
+            <a href="menu.html" class="btn-page btn-page-primary">Explore the menu</a>
+            <a href="our-stores.html" class="btn-page btn-page-accent">Find a store</a>
+          </div>
+        </div>
       </div>
     </section>
 

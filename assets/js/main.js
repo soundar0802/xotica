@@ -114,12 +114,14 @@ function initSauceCarousel() {
     const c = s.cloneNode(true);
     c.setAttribute("aria-hidden", "true");
     c.querySelectorAll("[tabindex]").forEach((el) => el.removeAttribute("tabindex"));
+    c.querySelectorAll("a[href]").forEach((el) => el.setAttribute("tabindex", "-1"));
     track.appendChild(c);
   });
   originals.slice().reverse().forEach((s) => {
     const c = s.cloneNode(true);
     c.setAttribute("aria-hidden", "true");
     c.querySelectorAll("[tabindex]").forEach((el) => el.removeAttribute("tabindex"));
+    c.querySelectorAll("a[href]").forEach((el) => el.setAttribute("tabindex", "-1"));
     track.insertBefore(c, track.firstChild);
   });
 
@@ -256,16 +258,27 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   // Pages outside the root (e.g. brand/) resolve the partials' links and images
-  // from the project root; on the brand page, links go to MAIN_SITE_URL once set
+  // from the project root; on the brand page, links go to MAIN_SITE_URL once set.
+  // Dark-mode pages (dark/) keep their page links inside the dark folder.
   const onBrandPage = document.body.classList.contains("bg-page");
+  const onDarkPage = document.documentElement.dataset.theme === "dark";
   const isRootPage = new URL(".", location.href).href === SITE_ROOT.href;
   if (!isRootPage || (MAIN_SITE_URL && onBrandPage)) {
     document.querySelectorAll(".site-header [href], .site-header [src], .site-footer [href], .site-footer [src]").forEach((el) => {
       const attr = el.hasAttribute("href") ? "href" : "src";
       const value = el.getAttribute(attr);
       if (/^(https?:|mailto:|tel:|#|\/)/.test(value)) return;
-      const base = attr === "href" && MAIN_SITE_URL && onBrandPage ? MAIN_SITE_URL : SITE_ROOT;
+      let base = SITE_ROOT;
+      if (attr === "href" && MAIN_SITE_URL && onBrandPage) base = MAIN_SITE_URL;
+      else if (attr === "href" && onDarkPage && /\.html(#|$)/.test(value)) base = location.href;
       el.setAttribute(attr, new URL(value, base).href);
+    });
+  }
+
+  // Dark pages use the transparent logo instead of the one on white
+  if (onDarkPage) {
+    document.querySelectorAll(".site-logo").forEach((img) => {
+      img.src = new URL("assets/images/brand/logos/xotica-logo-colour.png", SITE_ROOT).href;
     });
   }
 

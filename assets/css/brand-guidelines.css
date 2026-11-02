@@ -407,3 +407,6 @@
 @media (max-width: 358.98px) {
   .bg-downloads { grid-template-columns: 1fr; }
 }
+
+/* Keep back-to-top clear of the WhatsApp button */
+.bg-to-top { bottom: 92px; right: 29px; }

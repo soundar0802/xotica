@@ -13,6 +13,7 @@
 }
 
 .franchise-hero-title { color: var(--white); font-size: 46px; margin-top: 0; }
+.franchise-hero-title-img { display: block; width: 100%; max-width: 481px; height: auto; }
 
 /* Intro / built to work together / closing copy */
 .franchise-intro,
@@ -153,3 +154,66 @@
 }
 .franchise-form-button:hover,
 .franchise-form-button:focus-visible { color: var(--white); }
+
+/* Why partner – four pillars in two columns */
+.franchise-pillars { padding: 80px 0; }
+.franchise-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 80px;
+}
+.franchise-pillar-title {
+  font-family: var(--font);
+  font-size: 40px;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1.05;
+  color: var(--primary);
+  margin: 0 0 20px;
+}
+.franchise-pillar-title-alt { color: var(--secondary); }
+.franchise-pillar p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 0 14px;
+}
+.franchise-pillar p:last-child { margin-bottom: 0; }
+.franchise-pillar-lead {
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Link through to the Eco System page */
+.franchise-eco {
+  background: var(--black);
+  padding: 50px 0;
+}
+.franchise-eco-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  color: var(--white);
+}
+.franchise-eco-title {
+  font-family: var(--font);
+  font-size: 32px;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: var(--secondary);
+  margin: 0 0 8px;
+}
+.franchise-eco-inner p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+}
+.franchise-eco .btn-page { flex: 0 0 auto; }
+.franchise-enquiry-text .franchise-enquiry-email { margin-top: 10px; }
+.franchise-enquiry-email a {
+  font-weight: 600;
+  color: var(--primary);
+}

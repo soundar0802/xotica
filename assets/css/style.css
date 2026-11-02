@@ -90,6 +90,13 @@ a:focus-visible, button:focus-visible, .sauce-tile:focus-visible {
   color: var(--primary);
   font-size: 38px;
   -webkit-text-stroke: 1px var(--primary);
+  transition: color .3s;
+}
+/* White arrows on colourful slides (data-arrows="light") */
+.hero .carousel:has(.carousel-item.active[data-arrows="light"]) .carousel-control-prev i,
+.hero .carousel:has(.carousel-item.active[data-arrows="light"]) .carousel-control-next i {
+  color: var(--white);
+  -webkit-text-stroke-color: var(--white);
 }
 .hero .carousel-indicators [data-bs-target] {
   width: 12px; height: 12px;
@@ -110,8 +117,7 @@ a:focus-visible, button:focus-visible, .sauce-tile:focus-visible {
   isolation: isolate;
 }
 /* Pattern sits on a parallax layer so it can move while scrolling */
-.flavours-layer,
-.mild-wild-layer {
+.flavours-layer {
   background-image: url("../images/homepage/bg-pattern-1.svg");
   background-size: 1366px auto;
   background-position: center;
@@ -266,19 +272,144 @@ a:focus-visible, button:focus-visible, .sauce-tile:focus-visible {
   transform: rotate(-2deg);
 }
 
-.mild-wild {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--white);
-  padding: 96px 0 112px;
+/* App Store / Google Play badges */
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
 }
-.mild-wild > .container { position: relative; }
-.mild-wild-art {
+.store-badge {
+  display: block;
+  width: 196px;
+  transition: transform .3s;
+}
+.store-badge:hover,
+.store-badge:focus-visible { transform: translateY(-4px); }
+.store-badge img {
+  display: block;
   width: 100%;
-  max-width: 820px;
   height: auto;
 }
 
+/* ---------- Classic to extreme – dishes overlapping the headline ---------- */
+.flavour-blast {
+  --blast-dark: #202020;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 110px 0 120px;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 50%, rgba(246, 169, 48, .16), transparent 70%),
+    var(--white);
+}
+/* Food-icon pattern behind everything, faded towards the centre */
+.flavour-blast::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("../images/homepage/bg-pattern-1.svg") center / 900px auto repeat;
+  opacity: .7;
+  -webkit-mask-image: radial-gradient(ellipse 55% 55% at 50% 50%, transparent 30%, #000 85%);
+  mask-image: radial-gradient(ellipse 55% 55% at 50% 50%, transparent 30%, #000 85%);
+  pointer-events: none;
+}
+/* Shrink-wraps the headline so the dishes are placed relative to the words */
+.blast-banner {
+  /* Distance from the banner to the screen edge (page content is 1320px max) */
+  --blast-edge: max(calc(50% - 660px), calc(50% - 50vw));
+  position: relative;
+  display: inline-block;
+}
+
+.blast-title {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  font-family: var(--font);
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: .9;
+  letter-spacing: -1px;
+}
+.blast-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 14px;
+}
+/* Each word gets a white offset echo outlined in black */
+.blast-word {
+  --blast-ink: var(--blast-dark);
+  display: inline-block;
+  color: var(--blast-ink);
+  filter: drop-shadow(6px -6px 0 var(--white)) drop-shadow(0 0 1px var(--blast-dark));
+}
+.blast-red { --blast-ink: var(--primary); }
+.blast-sm { font-size: 52px; }
+.blast-xl { font-size: 124px; }
+.blast-xxl { font-size: 168px; letter-spacing: -3px; }
+.blast-stack {
+  font-size: 46px;
+  line-height: .9;
+  text-align: right;
+  margin-bottom: 12px;
+}
+
+/* Outline copy above the dishes – same layout, stroke only, in each word's own
+   colour so it only shows where a dish covers the letters */
+.blast-title-outline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+.blast-title-outline .blast-word {
+  color: transparent;
+  filter: none;
+  -webkit-text-stroke: 2px var(--blast-ink);
+}
+
+/* Dishes sit in the four corners of the section; where one reaches a word,
+   the outline copy shows that letter over the food */
+.blast-tray {
+  position: absolute;
+  z-index: 2;
+  height: auto;
+  filter: drop-shadow(0 22px 24px rgba(0, 0, 0, .25));
+  animation: blastFloat 7s ease-in-out infinite;
+  pointer-events: none;
+}
+.blast-tray-1 { width: 300px; top: -40px; left: var(--blast-edge); --r: -16deg; }
+.blast-tray-2 { width: 330px; top: -20px; right: var(--blast-edge); --r: 14deg; animation-delay: -2s; }
+.blast-tray-3 { width: 290px; bottom: -70px; left: var(--blast-edge); --r: 10deg; animation-delay: -4s; }
+.blast-tray-4 { width: 300px; bottom: -60px; right: var(--blast-edge); --r: -12deg; animation-delay: -5.5s; }
+@keyframes blastFloat {
+  0%, 100% { transform: translateY(0) rotate(var(--r)); }
+  50% { transform: translateY(-14px) rotate(calc(var(--r) + 3deg)); }
+}
+
+.blast-buttons {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 48px;
+}
+.blast-buttons .btn-page { font-size: 24px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .blast-tray { animation: none; transform: rotate(var(--r)); }
+}
 
 /* =========================================================
    INNER PAGES – shared components (About Us, Our Food)

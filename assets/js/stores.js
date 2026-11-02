@@ -5,7 +5,7 @@
 /* Placeholder stores – replace the name, address, hours, phone, map position
    (lat / lng), directions link and order link for each store */
 const STORES = [
-  { id: "store-01", name: "Store Name 01", street: "Street address", town: "Town", postcode: "Postcode", hours: "Mon – Sun : 11:00AM – Midnight", phone: "01234 567890", lat: 53.7632, lng: -2.7031, directions: "#", order: "#" },
+  { id: "store-01", name: "Xotica Northwich", street: "5 Kingsmead", town: "Northwich", postcode: "CW9 8UW", hours: "Mon – Sun : 11:00AM – Midnight", phone: "01606 331232", lat: 53.2430, lng: -2.5196, directions: "https://www.google.com/maps/dir/?api=1&destination=53.2430,-2.5196", order: "https://xbknorthwich.co.uk/" },
   { id: "store-02", name: "Store Name 02", street: "Street address", town: "Town", postcode: "Postcode", hours: "Mon – Sun : 11:00AM – Midnight", phone: "01234 567890", lat: 53.4808, lng: -2.2426, directions: "#", order: "#" },
   { id: "store-03", name: "Store Name 03", street: "Street address", town: "Town", postcode: "Postcode", hours: "Mon – Sun : 11:00AM – Midnight", phone: "01234 567890", lat: 53.7486, lng: -2.4875, directions: "#", order: "#" },
   { id: "store-04", name: "Store Name 04", street: "Street address", town: "Town", postcode: "Postcode", hours: "Mon – Sun : 11:00AM – Midnight", phone: "01234 567890", lat: 53.5769, lng: -2.4282, directions: "#", order: "#" },
@@ -36,7 +36,7 @@ const STORES = [
   // Brand pin – red drop with the Xotica logo in a white circle
   const pinIcon = L.divIcon({
     className: "",
-    html: '<div class="finder-pin"><span class="finder-pin-logo"><img src="assets/images/logo/map-pin-logo.png" alt=""></span></div>',
+    html: '<div class="finder-pin"><span class="finder-pin-logo"><img src="' + new URL("assets/images/logo/map-pin-logo.png", SITE_ROOT).href + '" alt=""></span></div>',
     iconSize: [54, 60],
     iconAnchor: [27, 59]
   });

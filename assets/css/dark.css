@@ -1,0 +1,148 @@
+/* =========================================================
+   DARK MODE – loaded last by the pages in dark/
+   (<html data-theme="dark">). Overrides only the light
+   surfaces and dark text; brand reds/oranges stay as they are.
+   ========================================================= */
+
+[data-theme="dark"] {
+  --dark-bg: #121212;
+  --dark-surface: #1c1c1c;
+  --dark-surface-2: #242424;
+  --dark-line: #333;
+  --dark-text: #f2f2f2;
+  --dark-muted: #a8a8a8;
+  color-scheme: dark;
+}
+
+[data-theme="dark"] body {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+/* ---------- Shared ---------- */
+[data-theme="dark"] .page-loader,
+[data-theme="dark"] .page-hero,
+[data-theme="dark"] .hero .carousel-item,
+[data-theme="dark"] .sauce-marquee { background: var(--dark-bg); }
+[data-theme="dark"] .page-text { color: var(--dark-text); }
+
+/* ---------- Header ---------- */
+[data-theme="dark"] .site-header {
+  background: var(--dark-surface);
+}
+[data-theme="dark"] .navbar-collapse {
+  background: var(--dark-surface);
+}
+[data-theme="dark"] .navbar .nav-link { border-bottom-color: var(--dark-line); }
+
+/* ---------- Homepage – classic to extreme ---------- */
+[data-theme="dark"] .flavour-blast {
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 50%, rgba(246, 169, 48, .12), transparent 70%),
+    var(--dark-bg);
+}
+[data-theme="dark"] .flavour-blast::before { opacity: .12; filter: invert(1); }
+/* Light words with a red offset echo (the light theme's echo is white).
+   Done through the variables the echo filter already uses, so the
+   outline copy over the dishes keeps filter: none and the tablet/mobile
+   echo offsets in responsive.css still apply. */
+[data-theme="dark"] .blast-word {
+  --blast-ink: var(--dark-text);
+  --white: var(--primary);
+  --blast-dark: #000;
+}
+[data-theme="dark"] .blast-red {
+  --blast-ink: var(--primary);
+  --white: var(--secondary);
+}
+
+/* ---------- Contact ---------- */
+[data-theme="dark"] .contact-intro,
+[data-theme="dark"] .contact-faq-intro,
+[data-theme="dark"] .contact-accordion-title,
+[data-theme="dark"] .contact-accordion-content { color: var(--dark-text); }
+[data-theme="dark"] .contact-accordion-title { border-bottom-color: var(--dark-line); }
+[data-theme="dark"] .contact-accordion-icon svg { fill: var(--dark-text); }
+
+/* ---------- Form fields (contact + franchise) ---------- */
+[data-theme="dark"] .contact-field input,
+[data-theme="dark"] .contact-field textarea,
+[data-theme="dark"] .franchise-form input {
+  color: var(--dark-text);
+  background: var(--dark-surface);
+  border-color: #555;
+}
+[data-theme="dark"] .contact-field input:focus,
+[data-theme="dark"] .contact-field textarea:focus,
+[data-theme="dark"] .franchise-form input:focus { box-shadow: inset 0 0 0 1px var(--dark-text); }
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder { color: var(--dark-muted); }
+
+/* ---------- Franchise / eco system ---------- */
+[data-theme="dark"] .franchise-eco { background: #000; }
+
+/* ---------- Our food ---------- */
+[data-theme="dark"] .food-eyebrow,
+[data-theme="dark"] .food-section-title { color: var(--dark-text); }
+[data-theme="dark"] .food-sauces .food-section-title { color: var(--white); }
+[data-theme="dark"] .food-section-tint { background: #1f1a12; }
+[data-theme="dark"] .sauce-card {
+  background: var(--dark-surface);
+  color: var(--dark-text);
+}
+
+/* ---------- Our stores ---------- */
+[data-theme="dark"] .finder,
+[data-theme="dark"] .finder-top { background: var(--dark-surface); }
+[data-theme="dark"] .finder { box-shadow: 0 24px 50px rgba(0, 0, 0, .5); }
+[data-theme="dark"] .finder-panel { background: var(--dark-bg); }
+[data-theme="dark"] .stores-franchise-art img { filter: invert(0.925); }
+[data-theme="dark"] .finder-search { border-color: #555; }
+[data-theme="dark"] .finder-search input {
+  background: transparent;
+  color: var(--dark-text);
+}
+[data-theme="dark"] .finder-count,
+[data-theme="dark"] .finder-empty { color: var(--dark-muted); }
+[data-theme="dark"] .finder-card { border-bottom-color: var(--dark-line); }
+[data-theme="dark"] .finder-card:hover,
+[data-theme="dark"] .finder-card.is-on { background: var(--dark-surface-2); }
+[data-theme="dark"] .finder-card-addr { color: #c4c4c4; }
+[data-theme="dark"] .finder-card-phone,
+[data-theme="dark"] .finder-link:hover,
+[data-theme="dark"] .finder-detail-line a { color: var(--dark-text); }
+[data-theme="dark"] .finder-detail {
+  background: var(--dark-surface);
+  color: var(--dark-text);
+}
+[data-theme="dark"] .finder-detail-close { background: #444; }
+/* Dark map: invert the OpenStreetMap tiles */
+[data-theme="dark"] #storeMap { background: #1a1a1a; }
+[data-theme="dark"] .leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(.9) contrast(.9); }
+[data-theme="dark"] .leaflet-control-zoom a,
+[data-theme="dark"] .leaflet-control-attribution {
+  background: var(--dark-surface);
+  color: var(--dark-text);
+  border-color: var(--dark-line);
+}
+[data-theme="dark"] .leaflet-control-attribution a { color: var(--secondary); }
+
+/* ---------- Brand guidelines ----------
+   Logo demo canvases (clear space, minimum size, don'ts) stay white
+   so the artwork is shown as it is meant to be used. */
+[data-theme="dark"] .bg-page {
+  --bg-cream: var(--dark-surface);
+  --bg-line: var(--dark-line);
+  --bg-ink: var(--dark-text);
+  background: var(--dark-bg);
+}
+[data-theme="dark"] .bg-variants figcaption,
+[data-theme="dark"] .bg-minsize span,
+[data-theme="dark"] .bg-font-note,
+[data-theme="dark"] .bg-type-scale span,
+[data-theme="dark"] .bg-hint,
+[data-theme="dark"] .bg-swatch dd,
+[data-theme="dark"] .bg-note,
+[data-theme="dark"] .bg-donts p,
+[data-theme="dark"] .bg-downloads small { color: var(--dark-muted); }
+[data-theme="dark"] .bg-toast { background: #333; }

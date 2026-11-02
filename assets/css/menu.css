@@ -183,6 +183,63 @@
   color: var(--flip-text);
 }
 
+/* Location tiles – same flip design, store name on the front, order link on the back */
+.menu-flip-location .menu-flip-front {
+  align-items: center;
+  gap: 6px;
+  color: var(--flip-title);
+}
+.menu-location-pin {
+  font-size: 40px;
+  line-height: 1;
+}
+.menu-location-name {
+  font-family: var(--font);
+  font-size: 22px;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+.menu-location-cta {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  opacity: .85;
+}
+.menu-flip-location .menu-flip-back { padding: 16px 20px; }
+.menu-flip-location .menu-flip-title { font-size: 17px; }
+.menu-flip-location .menu-flip-text {
+  font-size: 14px;
+  line-height: 1.3;
+}
+.menu-flip-location .menu-flip-text a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+.menu-location-btn {
+  align-self: flex-start;
+  margin-top: 8px;
+  padding: 6px 14px;
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--flip-bg);
+  background: var(--flip-title);
+  text-decoration: none;
+  transition: transform .2s;
+}
+.menu-location-btn:hover,
+.menu-location-btn:focus-visible {
+  color: var(--flip-bg);
+  transform: translateY(-2px);
+}
+
 /* ---------- Bands ---------- */
 .menu-band {
   background: var(--primary);

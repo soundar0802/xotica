@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xotica Badboy Kebabs</title>
+  <link rel="icon" type="image/jpeg" href="../assets/images/logo/favicon.jpg">
+  <link rel="apple-touch-icon" href="../assets/images/logo/favicon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/css/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/header.css" rel="stylesheet">
+  <link href="../assets/css/footer.css" rel="stylesheet">
+  <link href="../assets/css/responsive.css" rel="stylesheet">
+  <link href="../assets/css/dark.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Page loader – fades out once the page has loaded (main.js) -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <img src="../assets/images/brand/logos/xotica-logo-colour.png" alt="" class="page-loader-logo">
+    <span class="page-loader-bar"></span>
+  </div>
+<div class="page-wrapper">
+
+  <!-- ================= HEADER ================= -->
+  <div id="header"></div>
+
+  <main>
+
+    <!-- ================= SECTION 1: HERO CAROUSEL ================= -->
+    <section class="hero" data-animate="fadeIn">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../assets/images/homepage/carousel-2.jpg" class="d-block w-100" alt="Perfect Combo for bigger cravings">
+          </div>
+          <div class="carousel-item" data-arrows="light">
+            <img src="../assets/images/homepage/carousel-1.jpg" class="d-block w-100" alt="Limited edition Loaded Kebab Box in your favourite BadBoy flavours">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <i class="bi bi-chevron-left" aria-hidden="true"></i>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <i class="bi bi-chevron-right" aria-hidden="true"></i>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 2: SIGNATURE FLAVOURS ================= -->
+    <section class="flavours">
+      <div class="flavours-intro" data-parallax-speed="4">
+        <div class="parallax-layer flavours-layer" aria-hidden="true"></div>
+        <div class="container">
+          <h2 class="flavours-title text-center" data-animate="slideInUp">Signature flavours your way</h2>
+
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6 text-center text-lg-start">
+              <h3 class="drip-heading" data-animate="slideInUp">
+                <img src="../assets/images/homepage/its-all-about-the-drip.png" alt="It's all about the drip" class="drip-img">
+              </h3>
+            </div>
+            <div class="col-lg-6 text-center text-lg-start">
+              <p class="drip-copy" data-animate="slideInUp">Flavour your Kebab<br> from a choice of 5<br> signature flavours</p>
+              <a href="menu.html" class="btn btn-orange" data-animate="slideInUp">Check out the menu!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marquee -->
+      <div class="sauce-marquee" aria-label="Our sauces">
+        <div class="sauce-track" id="sauceTrack">
+
+          <div class="sauce-tile" style="--tile:#FFE27A; --tile-text:var(--black)" tabindex="0">
+            <img src="../assets/images/homepage/sauces/original-sauce.png" alt="Original Badboy Sauce">
+            <div class="sauce-info">
+              <h4>Original Badboy Sauce</h4>
+              <p>Our signature sauce packed with bold, unforgettable flavour</p>
+              <span class="heat">Heat <i class="bi bi-fire"></i></span>
+            </div>
+          </div>
+
+          <div class="sauce-tile" style="--tile:#B5121B" tabindex="0">
+            <img src="../assets/images/homepage/sauces/flamin-sauce.png" alt="Flamin’ Sauce">
+            <div class="sauce-info">
+              <h4>Flamin’ Sauce</h4>
+              <p>Fiery chilli heat with a kick that keeps you coming back.</p>
+              <span class="heat">Heat <i class="bi bi-fire"></i></span>
+            </div>
+          </div>
+
+          <div class="sauce-tile" style="--tile:var(--black)" tabindex="0">
+            <img src="../assets/images/homepage/sauces/bbq-sauce.png" alt="BBQ Sauce">
+            <div class="sauce-info">
+              <h4>BBQ Sauce</h4>
+              <p>Rich, smoky barbecue flavour with a sweet, tangy finish.</p>
+              <span class="heat">Heat <i class="bi bi-fire"></i><i class="bi bi-fire"></i><i class="bi bi-fire"></i></span>
+            </div>
+          </div>
+
+          <div class="sauce-tile" style="--tile:#1B4F8A" tabindex="0">
+            <img src="../assets/images/homepage/sauces/lemon-and-herb-sauce.png" alt="Lemon &amp; Herb Sauce">
+            <div class="sauce-info">
+              <h4>Lemon &amp; Herb Sauce</h4>
+              <p>Zesty lemon blended with fragrant herbs for a fresh, vibrant taste.</p>
+              <span class="heat">Heat <i class="bi bi-fire"></i></span>
+            </div>
+          </div>
+
+          <div class="sauce-tile" style="--tile:#F0461F" tabindex="0">
+            <img src="../assets/images/homepage/sauces/piri-piri-sauce.png" alt="Piri Piri Sauce">
+            <div class="sauce-info">
+              <h4>Piri Piri Sauce</h4>
+              <p>Bold peri-peri spice with a punchy chilli kick.</p>
+              <span class="heat">Heat <i class="bi bi-fire"></i><i class="bi bi-fire"></i></span>
+            </div>
+          </div>
+
+          <div class="sauce-tile" style="--tile:#FFE27A; --tile-text:var(--black)" tabindex="0">
+            <img src="../assets/images/homepage/sauces/original-sauce.png" alt="Original Badboy Sauce">
+            <div class="sauce-info">
+              <h4>Original Badboy Sauce</h4>
+              <p>Our signature sauce packed with bold, unforgettable flavour</p>
+              <span class="heat">Heat <i class="bi bi-fire"></i></span>
+            </div>
+          </div>
+
+          <div class="sauce-tile" style="--tile:#B5121B" tabindex="0">
+            <img src="../assets/images/homepage/sauces/flamin-sauce.png" alt="Flamin’ Sauce">
+            <div class="sauce-info">
+              <h4>Flamin’ Sauce</h4>
+              <p>Fiery chilli heat with a kick that keeps you coming back.</p>
+              <span class="heat">Heat <i class="bi bi-fire"></i></span>
+            </div>
+          </div>
+
+          <div class="sauce-tile" style="--tile:var(--black)" tabindex="0">
+            <img src="../assets/images/homepage/sauces/bbq-sauce.png" alt="BBQ Sauce">
+            <div class="sauce-info">
+              <h4>BBQ Sauce</h4>
+              <p>Rich, smoky barbecue flavour with a sweet, tangy finish.</p>
+              <span class="heat">Heat <i class="bi bi-fire"></i><i class="bi bi-fire"></i><i class="bi bi-fire"></i></span>
+            </div>
+          </div>
+
+          <div class="sauce-tile" style="--tile:#1B4F8A" tabindex="0">
+            <img src="../assets/images/homepage/sauces/lemon-and-herb-sauce.png" alt="Lemon &amp; Herb Sauce">
+            <div class="sauce-info">
+              <h4>Lemon &amp; Herb Sauce</h4>
+              <p>Zesty lemon blended with fragrant herbs for a fresh, vibrant taste.</p>
+              <span class="heat">Heat <i class="bi bi-fire"></i></span>
+            </div>
+          </div>
+
+          <div class="sauce-tile" style="--tile:#F0461F" tabindex="0">
+            <img src="../assets/images/homepage/sauces/piri-piri-sauce.png" alt="Piri Piri Sauce">
+            <div class="sauce-info">
+              <h4>Piri Piri Sauce</h4>
+              <p>Bold peri-peri spice with a punchy chilli kick.</p>
+              <span class="heat">Heat <i class="bi bi-fire"></i><i class="bi bi-fire"></i></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 3: PRODUCTS ================= -->
+    <section class="products">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-6 col-lg-3">
+            <a href="#" class="product-card" data-animate="slideInUp" data-animate-tablet="none">
+              <img src="../assets/images/homepage/superstar-box.png" alt="Superstar Box" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-6 col-lg-3">
+            <a href="#" class="product-card" data-animate="slideInUp" data-animate-tablet="none" data-animate-delay="150">
+              <img src="../assets/images/homepage/donner-meat.png" alt="Donner Kebab" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-6 col-lg-3">
+            <a href="#" class="product-card" data-animate="slideInUp" data-animate-tablet="none" data-animate-delay="300">
+              <img src="../assets/images/homepage/chicken-tikka-roll.png" alt="Chicken Tikka Roll" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-6 col-lg-3">
+            <a href="#" class="product-card" data-animate="slideInUp" data-animate-tablet="none" data-animate-delay="450">
+              <img src="../assets/images/homepage/salt-n-pepper-chips.png" alt="Salt N Pepper Chips" class="img-fluid">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 4: REWARDS + MILD TO WILD ================= -->
+    <section class="rewards">
+      <div class="container">
+        <div class="row align-items-center justify-content-between g-4 text-center text-lg-start">
+          <div class="col-lg-5">
+            <p class="rewards-text">Choose your flavour and enjoy delicious Kebab every time!</p>
+          </div>
+          <div class="col-sm-5 col-lg-3">
+            <img src="../assets/images/homepage/collect-rewards.svg" alt="Collect rewards" class="rewards-badge">
+          </div>
+          <!-- App download badges – add the store links once the app is live -->
+          <div class="col-sm-7 col-lg-4">
+            <div class="store-badges">
+              <a href="#" class="store-badge">
+                <img src="../assets/images/homepage/app-store-badge.png" alt="Download on the App Store" width="701" height="213">
+              </a>
+              <a href="#" class="store-badge">
+                <img src="../assets/images/homepage/google-play-badge.png" alt="Get it on Google Play" width="702" height="213">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 5: CLASSIC TO EXTREME ================= -->
+    <section class="flavour-blast" aria-labelledby="flavourBlastTitle">
+      <div class="container text-center">
+        <!-- Dishes sit over the headline; an outline copy on top keeps the letters visible through the food -->
+        <div class="blast-banner" data-animate="slideInUp">
+          <h2 class="blast-title" id="flavourBlastTitle">
+              <span class="blast-row"><span class="blast-word blast-sm">From</span></span>
+              <span class="blast-row"><span class="blast-word blast-xl">Classic</span><span class="blast-word blast-sm">to</span></span>
+              <span class="blast-row"><span class="blast-word blast-xxl blast-red">Extreme</span></span>
+              <span class="blast-row"><span class="blast-word blast-sm blast-stack">Try<br>our</span><span class="blast-word blast-xl">Signature</span></span>
+              <span class="blast-row"><span class="blast-word blast-xl">Flavours</span></span>
+          </h2>
+          <img src="../assets/images/homepage/flavours/loaded-chips-drizzle.webp" alt="" class="blast-tray blast-tray-1" loading="lazy">
+          <img src="../assets/images/homepage/flavours/shashlik-on-naan.webp" alt="" class="blast-tray blast-tray-2" loading="lazy">
+          <img src="../assets/images/homepage/flavours/chicken-onion-rings.webp" alt="" class="blast-tray blast-tray-3" loading="lazy">
+          <img src="../assets/images/homepage/flavours/tikka-chips-rice.webp" alt="" class="blast-tray blast-tray-4" loading="lazy">
+          <div class="blast-title blast-title-outline" aria-hidden="true">
+              <span class="blast-row"><span class="blast-word blast-sm">From</span></span>
+              <span class="blast-row"><span class="blast-word blast-xl">Classic</span><span class="blast-word blast-sm">to</span></span>
+              <span class="blast-row"><span class="blast-word blast-xxl blast-red">Extreme</span></span>
+              <span class="blast-row"><span class="blast-word blast-sm blast-stack">Try<br>our</span><span class="blast-word blast-xl">Signature</span></span>
+              <span class="blast-row"><span class="blast-word blast-xl">Flavours</span></span>
+          </div>
+          <div class="blast-buttons" data-animate="slideInUp" data-animate-delay="200">
+            <a href="menu.html" class="btn-page btn-page-primary">Explore the menu</a>
+            <a href="our-stores.html" class="btn-page btn-page-accent">Find a store</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <div id="footer"></div>
+
+</div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
